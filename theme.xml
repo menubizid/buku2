@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' lang='id' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1.0, viewport-fit=cover' name='viewport'/>
+<meta content='#4F46E5' name='theme-color'/>
+<meta content='Buku Workspace - CMS Kelas Membaca untuk membangun kebiasaan membaca bersama.' name='description'/>
+<title><data:blog.pageTitle/></title>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+/* Blogger required skin block - app styles are in the main style tag below. */
+#navbar-iframe, .navbar, .header-outer, .footer-outer, .post-feeds, .blog-feeds, .widget, .Attribution { display:none !important; }
+]]></b:skin>
+<style>
+/* ============================================================
+   BUKU WORKSPACE - DESIGN SYSTEM
+   Bright, Clean, Modern, Readable, Responsive
+   ============================================================ */
+:root{
+  --bg:#F8FAFC; --bg-soft:#F1F5F9; --surface:#FFFFFF; --surface-alt:#F8FAFF;
+  --text:#0F172A; --text-body:#334155; --text-muted:#475569; --text-light:#64748B;
+  --border:#E2E8F0; --border-soft:#EDF2F7;
+  --primary:#4F46E5; --primary-dark:#4338CA; --primary-soft:#EEF2FF; --primary-ring:rgba(79,70,229,.18);
+  --mint:#10B981; --mint-soft:#ECFDF5; --amber:#F59E0B; --amber-soft:#FFFBEB;
+  --rose:#EF4444; --rose-soft:#FEF2F2; --sky:#0EA5E9; --sky-soft:#F0F9FF;
+  --radius:16px; --radius-sm:12px; --radius-lg:24px; --radius-pill:999px;
+  --shadow:0 4px 20px -2px rgba(15,23,42,.06); --shadow-lg:0 20px 50px -12px rgba(15,23,42,.12);
+  --shadow-soft:0 2px 10px rgba(15,23,42,.04);
+  --nav-h:76px; --bottom-nav-h:74px; --sidebar-w:280px;
+  --font-display:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --font-body:'Inter','Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.65;color:var(--text-body);background:var(--bg);overflow-x:hidden}
+body.modal-open{overflow:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:none;padding:0;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+::selection{background:var(--primary-soft);color:var(--primary-dark)}
+:focus-visible{outline:3px solid var(--primary-ring);outline-offset:2px}
+.container{width:min(1200px,calc(100% - 40px));margin-inline:auto}
+.section{padding:88px 0}
+.section-sm{padding:64px 0}
+.section-label{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);background:var(--primary-soft);color:var(--primary);font-size:14px;font-weight:700;margin-bottom:16px}
+.section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);line-height:1.2;font-weight:800;color:var(--text);margin:0 0 16px;letter-spacing:-.02em}
+.section-desc{font-size:17px;line-height:1.75;color:var(--text-muted);margin:0;max-width:720px}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head .section-desc{margin-inline:auto}
+.gradient-text{background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 50%,#0EA5E9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+</style>
+<style>
+/* Buttons */
+.btn{min-height:48px;padding:0 22px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.2;border:1.5px solid transparent;transition:all .2s var(--ease);white-space:nowrap;position:relative}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.6;pointer-events:none}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.btn-primary:hover{background:var(--primary-dark);box-shadow:0 12px 28px rgba(79,70,229,.32)}
+.btn-secondary{background:#fff;color:var(--text);border-color:var(--border);box-shadow:var(--shadow-soft)}
+.btn-secondary:hover{border-color:#C7D2FE;background:var(--primary-soft);color:var(--primary)}
+.btn-ghost{background:transparent;color:var(--text-muted)}
+.btn-ghost:hover{background:var(--bg-soft);color:var(--text)}
+.btn-danger{background:var(--rose-soft);color:var(--rose);border-color:#FECACA}
+.btn-danger:hover{background:#FEE2E2}
+.btn-sm{min-height:42px;padding:0 16px;font-size:14px;border-radius:12px}
+.btn-lg{min-height:54px;padding:0 28px;font-size:16px;border-radius:16px}
+.btn-block{width:100%}
+.btn .spinner{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+.btn-secondary .spinner,.btn-ghost .spinner,.btn-danger .spinner{border-color:rgba(79,70,229,.2);border-top-color:var(--primary)}
+.icon{width:20px;height:20px;flex-shrink:0;display:inline-block;vertical-align:middle}
+.icon-lg{width:24px;height:24px}.icon-sm{width:18px;height:18px}
+
+/* Cards / badges */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--radius-pill);font-size:13px;font-weight:700;line-height:1}
+.badge-primary{background:var(--primary-soft);color:var(--primary)}
+.badge-mint{background:var(--mint-soft);color:#059669}
+.badge-amber{background:var(--amber-soft);color:#B45309}
+.badge-rose{background:var(--rose-soft);color:var(--rose)}
+.badge-slate{background:var(--bg-soft);color:var(--text-muted)}
+
+/* Forms */
+.field{margin-bottom:18px}
+.field label{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
+.field-hint{font-size:13px;color:var(--text-light);margin-top:6px;line-height:1.5}
+.input,.select,.textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--border);background:#fff;font-size:16px;line-height:1.5;color:var(--text);transition:border-color .2s,box-shadow .2s}
+.input:focus,.select:focus,.textarea:focus{outline:none;border-color:#A5B4FC;box-shadow:0 0 0 4px var(--primary-ring)}
+.textarea{min-height:120px;resize:vertical}
+.input-icon-wrap{position:relative}
+.input-icon-wrap .input{padding-left:44px}
+.input-icon-wrap .input-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-light);width:20px;height:20px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.form-grid .full{grid-column:1/-1}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+
+/* Image upload */
+.img-upload{border:1.5px dashed #C7D2FE;background:#FBFCFF;border-radius:14px;padding:16px;text-align:center}
+.img-upload-preview{width:100%;max-width:220px;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin:0 auto 12px;border:1px solid var(--border);background:var(--bg-soft)}
+.img-upload-preview.avatar{max-width:120px;aspect-ratio:1/1;border-radius:50%}
+.img-upload-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.img-upload input[type=file]{display:none}
+
+/* Table */
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:14px;background:#fff}
+.table{width:100%;border-collapse:separate;border-spacing:0;min-width:680px}
+.table th,.table td{padding:14px 16px;text-align:left;font-size:15px;vertical-align:middle;border-bottom:1px solid var(--border-soft)}
+.table th{font-size:13px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;background:#FBFCFE;position:sticky;top:0}
+.table tr:last-child td{border-bottom:none}
+.table tr:hover td{background:#FAFBFF}
+
+/* Modal / bottom sheet */
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.45);backdrop-filter:blur(4px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);width:min(720px,100%);max-height:calc(100dvh - 40px);overflow:hidden;display:flex;flex-direction:column;animation:modalIn .22s var(--ease)}
+.modal.modal-sm{width:min(520px,100%)}
+.modal.modal-lg{width:min(920px,100%)}
+.modal-header{padding:20px 24px;border-bottom:1px solid var(--border-soft);display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.modal-title{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text);margin:0;line-height:1.3}
+.modal-sub{font-size:14px;color:var(--text-muted);margin-top:4px}
+.modal-close{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--text-muted);flex-shrink:0}
+.modal-close:hover{background:var(--bg-soft);color:var(--text)}
+.modal-body{padding:24px;overflow:auto}
+.modal-footer{padding:16px 24px;border-top:1px solid var(--border-soft);display:flex;gap:10px;justify-content:flex-end;background:#FCFCFD}
+@media(max-width:767px){
+  .modal-backdrop{padding:0;align-items:flex-end}
+  .modal,.modal.modal-sm,.modal.modal-lg{width:100%;max-height:92dvh;border-radius:24px 24px 0 0;animation:sheetIn .28s var(--ease)}
+  .modal-header{padding:18px 20px}
+  .modal-header::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:44px;height:5px;border-radius:99px;background:#CBD5E1}
+  .modal-header{position:relative;padding-top:28px}
+  .modal-body{padding:20px}
+  .modal-footer{padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px))}
+  .modal-footer .btn{flex:1}
+}
+
+/* Toast */
+.toast-wrap{position:fixed;top:20px;right:20px;z-index:2000;display:flex;flex-direction:column;gap:10px;width:min(380px,calc(100vw - 32px))}
+.toast{background:#fff;border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-lg);display:flex;gap:12px;align-items:flex-start;animation:toastIn .25s var(--ease)}
+.toast.success{border-left-color:var(--mint)}.toast.error{border-left-color:var(--rose)}.toast.warn{border-left-color:var(--amber)}
+.toast-msg{font-size:14px;font-weight:600;color:var(--text);line-height:1.5}
+@media(max-width:640px){.toast-wrap{left:16px;right:16px;top:16px;width:auto}}
+</style>
+<style>
+/* Landing Nav */
+.landing-nav{position:sticky;top:0;z-index:500;background:rgba(248,250,252,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(226,232,240,.6)}
+.nav-inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--text);letter-spacing:-.02em}
+.brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#7C3AED);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(79,70,229,.3);font-size:20px}
+.brand-mark svg{width:22px;height:22px}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:10px 14px;font-size:15px;font-weight:600;color:var(--text-muted);border-radius:10px;transition:.2s}
+.nav-links a:hover{color:var(--primary);background:var(--primary-soft)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.mobile-menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--border);background:#fff;align-items:center;justify-content:center}
+.mobile-drawer{display:none;position:absolute;top:calc(100% + 8px);left:20px;right:20px;background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow-lg);padding:16px;z-index:501}
+.mobile-drawer.open{display:block}
+.mobile-drawer a{display:block;padding:12px 14px;font-size:16px;font-weight:600;color:var(--text-body);border-radius:10px}
+.mobile-drawer a:hover{background:var(--primary-soft);color:var(--primary)}
+.mobile-drawer .drawer-actions{display:grid;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border-soft)}
+@media(max-width:1023px){.nav-links,.nav-actions .hide-mobile{display:none}.mobile-menu-btn{display:inline-flex}}
+
+/* Hero */
+.hero{padding:72px 0 88px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(79,70,229,.12),transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.08),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:14px;font-weight:700;color:var(--primary);margin-bottom:20px;box-shadow:var(--shadow-soft)}
+.hero-title{font-family:var(--font-display);font-size:clamp(34px,5vw,56px);line-height:1.12;font-weight:800;color:var(--text);margin:0 0 20px;letter-spacing:-.03em}
+.hero-desc{font-size:18px;line-height:1.75;color:var(--text-muted);margin:0 0 28px;max-width:600px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap}
+.hero-meta-item{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--text-body)}
+.hero-meta-item .meta-icon{width:36px;height:36px;border-radius:10px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center}
+.hero-visual{position:relative}
+.hero-card{background:#fff;border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow-lg);padding:28px;position:relative}
+.hero-mock-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.hero-mock-title{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--text)}
+.hero-mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.hero-mock-stat{background:var(--bg);border-radius:14px;padding:16px;text-align:center}
+.hero-mock-stat .val{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--text);line-height:1}
+.hero-mock-stat .lbl{font-size:13px;font-weight:600;color:var(--text-light);margin-top:4px}
+.hero-mock-book{display:flex;gap:16px;align-items:center;background:linear-gradient(135deg,#F8FAFF,#EEF2FF);border-radius:16px;padding:16px;margin-bottom:14px}
+.hero-mock-cover{width:72px;height:96px;border-radius:10px;background:linear-gradient(135deg,#C7D2FE,#818CF8);display:grid;place-items:center;color:#fff;font-weight:800;font-size:24px;flex-shrink:0;object-fit:cover}
+.hero-mock-book h4{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--text);font-family:var(--font-display)}
+.hero-mock-book p{margin:0;font-size:14px;color:var(--text-muted)}
+.progress{height:10px;background:#E2E8F0;border-radius:999px;overflow:hidden;margin-top:10px}
+.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--primary),#818CF8);border-radius:999px}
+.floating-chip{position:absolute;background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--text);animation:float 5s ease-in-out infinite}
+.floating-chip.chip-1{top:-10px;right:-10px}
+.floating-chip.chip-2{bottom:20px;left:-20px;animation-delay:1.5s}
+.chip-dot{width:10px;height:10px;border-radius:50%;background:var(--mint)}
+@media(max-width:1023px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-visual{max-width:600px;margin:0 auto;width:100%}.floating-chip{display:none}}
+@media(max-width:640px){.hero{padding:48px 0 64px}.hero-desc{font-size:16px}.hero-actions .btn{flex:1}.hero-mock-stats{grid-template-columns:repeat(3,1fr);gap:8px}.hero-mock-stat{padding:12px 8px}.hero-mock-stat .val{font-size:20px}}
+</style>
+<style>
+/* Social proof */
+.social-proof{padding:28px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);background:#fff}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.proof-item .proof-val{font-family:var(--font-display);font-size:clamp(28px,3vw,36px);font-weight:800;color:var(--text);line-height:1}
+.proof-item .proof-lbl{font-size:14px;font-weight:600;color:var(--text-muted);margin-top:6px}
+@media(max-width:640px){.proof-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+
+/* Generic grids */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:1023px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
+
+/* Feature cards */
+.feature-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .25s var(--ease)}
+.feature-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#C7D2FE}
+.feature-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.feature-icon.purple{background:var(--primary-soft);color:var(--primary)}
+.feature-icon.mint{background:var(--mint-soft);color:var(--mint)}
+.feature-icon.amber{background:var(--amber-soft);color:var(--amber)}
+.feature-icon.sky{background:var(--sky-soft);color:var(--sky)}
+.feature-icon.rose{background:var(--rose-soft);color:var(--rose)}
+.feature-card h3{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--text);margin:0 0 10px}
+.feature-card p{font-size:15px;color:var(--text-muted);margin:0;line-height:1.7}
+
+/* Split section */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.reverse .split-visual{order:-1}
+.split-visual{background:linear-gradient(180deg,#F8FAFF,#EEF2FF);border:1px solid #E0E7FF;border-radius:24px;padding:32px;min-height:320px}
+.split-content .section-label{margin-bottom:14px}
+.split-content h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--text);margin:0 0 16px;line-height:1.2;letter-spacing:-.02em}
+.split-content p{font-size:16px;color:var(--text-muted);line-height:1.75;margin:0 0 20px}
+.check-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--text-body);font-weight:500}
+.check-icon{width:24px;height:24px;border-radius:50%;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+.check-icon svg{width:14px;height:14px}
+@media(max-width:1023px){.split{grid-template-columns:1fr;gap:32px}.split.reverse .split-visual{order:0}}
+
+/* Habit steps */
+.habit-steps{display:grid;gap:16px}
+.habit-step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px}
+.habit-step-num{width:44px;height:44px;border-radius:12px;background:var(--primary);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:16px;flex-shrink:0}
+.habit-step h4{margin:0 0 4px;font-size:17px;font-weight:700;color:var(--text);font-family:var(--font-display)}
+.habit-step p{margin:0;font-size:15px;color:var(--text-muted);line-height:1.6}
+
+/* Pustaloka-style book cards */
+.book-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .25s var(--ease);display:flex;flex-direction:column}
+.book-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#C7D2FE}
+.book-cover{aspect-ratio:3/4;background:linear-gradient(135deg,#E0E7FF,#C7D2FE);position:relative;overflow:hidden}
+.book-cover img{width:100%;height:100%;object-fit:cover}
+.book-cover-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-family:var(--font-display);font-size:22px;font-weight:800;color:#4338CA;line-height:1.3}
+.book-cover .book-badge{position:absolute;top:12px;left:12px}
+.book-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.book-cat{font-size:13px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.04em}
+.book-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);margin:0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.book-author{font-size:14px;color:var(--text-muted);margin:0}
+.book-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:12px;font-size:13px;color:var(--text-light);font-weight:600}
+.book-meta span{display:inline-flex;align-items:center;gap:5px}
+.book-actions{padding:0 20px 20px;display:flex;gap:8px}
+.book-actions .btn{flex:1}
+
+/* Testimonials */
+.testimonial-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px}
+.testimonial-stars{color:#F59E0B;font-size:18px;letter-spacing:2px;margin-bottom:14px}
+.testimonial-card p{font-size:16px;line-height:1.75;color:var(--text-body);margin:0 0 20px}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#C7D2FE,#818CF8);display:grid;place-items:center;font-weight:800;color:#4338CA;font-size:16px;flex-shrink:0;object-fit:cover}
+.avatar.sm{width:40px;height:40px;font-size:14px}
+.avatar.lg{width:64px;height:64px;font-size:22px}
+.testimonial-author strong{display:block;font-size:15px;color:var(--text);font-family:var(--font-display)}
+.testimonial-author span{font-size:14px;color:var(--text-muted)}
+
+/* Pricing */
+.pricing-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:32px;position:relative}
+.pricing-card.featured{border-color:var(--primary);box-shadow:0 20px 50px -12px rgba(79,70,229,.25)}
+.pricing-pop{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap}
+.pricing-name{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text);margin:0 0 8px}
+.pricing-desc{font-size:15px;color:var(--text-muted);margin:0 0 20px;min-height:48px}
+.pricing-price{font-family:var(--font-display);font-size:42px;font-weight:800;color:var(--text);line-height:1;margin-bottom:4px}
+.pricing-price span{font-size:16px;font-weight:600;color:var(--text-muted)}
+.pricing-period{font-size:14px;color:var(--text-light);margin-bottom:24px}
+.pricing-list{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:12px}
+.pricing-list li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--text-body)}
+.pricing-list li svg{width:20px;height:20px;color:var(--mint);flex-shrink:0;margin-top:1px}
+
+/* FAQ */
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.faq-q{width:100%;padding:20px 24px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:700;color:var(--text);font-family:var(--font-display);line-height:1.4}
+.faq-q:hover{background:#FAFBFF}
+.faq-q .faq-icon{width:32px;height:32px;border-radius:8px;background:var(--bg-soft);display:grid;place-items:center;flex-shrink:0;transition:.2s}
+.faq-item.open .faq-icon{background:var(--primary-soft);color:var(--primary);transform:rotate(45deg)}
+.faq-a{padding:0 24px 20px;font-size:16px;color:var(--text-muted);line-height:1.75;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* CTA */
+.cta-section{padding:40px 0 88px}
+.cta-box{background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 60%,#6366F1 100%);border-radius:32px;padding:56px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;margin:0 0 16px;line-height:1.2}
+.cta-box p{font-size:18px;opacity:.92;margin:0 auto 28px;max-width:640px;line-height:1.7}
+.cta-box .btn-primary{background:#fff;color:var(--primary);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.cta-box .btn-primary:hover{background:#F8FAFF}
+.cta-box .btn-secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.3)}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+@media(max-width:640px){.cta-box{padding:40px 24px;border-radius:24px}.cta-box p{font-size:16px}}
+
+/* Footer */
+.footer{padding:56px 0 32px;background:#fff;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand p{font-size:15px;color:var(--text-muted);margin:16px 0 0;line-height:1.7;max-width:320px}
+.footer h4{font-family:var(--font-display);font-size:15px;font-weight:800;color:var(--text);margin:0 0 16px}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.footer ul a{font-size:15px;color:var(--text-muted)}
+.footer ul a:hover{color:var(--primary)}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--text-light)}
+@media(max-width:1023px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr;gap:28px}}
+</style>
+<style>
+/* App Shell */
+.app-shell{display:none;min-height:100dvh;background:var(--bg)}
+.app-shell.active{display:grid;grid-template-columns:var(--sidebar-w) 1fr}
+.sidebar{background:#fff;border-right:1px solid var(--border);padding:24px 16px;position:sticky;top:0;height:100dvh;overflow:auto;display:flex;flex-direction:column}
+.sidebar-brand{display:flex;align-items:center;gap:12px;padding:4px 12px;margin-bottom:28px;font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--text)}
+.sidebar-brand .brand-mark{width:40px;height:40px;border-radius:12px;font-size:18px}
+.sidebar-nav{display:grid;gap:4px}
+.sidebar-link{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;font-size:15px;font-weight:600;color:var(--text-muted);transition:.2s;width:100%;text-align:left}
+.sidebar-link:hover{background:var(--bg-soft);color:var(--text)}
+.sidebar-link.active{background:var(--primary-soft);color:var(--primary)}
+.sidebar-link .icon{width:20px;height:20px}
+.sidebar-section{font-size:12px;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:.08em;padding:20px 14px 8px}
+.sidebar-footer{margin-top:auto;padding-top:16px;border-top:1px solid var(--border-soft)}
+.user-chip{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:var(--bg);margin-bottom:10px}
+.user-chip-info{min-width:0}
+.user-chip-info strong{display:block;font-size:14px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.user-chip-info span{font-size:13px;color:var(--text-muted);text-transform:capitalize}
+
+.main-wrap{min-width:0;display:flex;flex-direction:column}
+.topbar{height:72px;padding:0 28px;border-bottom:1px solid var(--border);background:rgba(248,250,252,.85);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100}
+.topbar-left{display:flex;align-items:center;gap:14px;min-width:0}
+.topbar-title{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-sub{font-size:14px;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.content{padding:28px;flex:1}
+.content-inner{max-width:1280px;margin:0 auto}
+
+/* Bottom nav */
+.bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;height:var(--bottom-nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);z-index:200;padding:0 8px env(safe-area-inset-bottom,0px)}
+.bottom-nav-inner{display:grid;grid-template-columns:repeat(5,1fr);height:100%;max-width:600px;margin:0 auto}
+.bottom-nav-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--text-light);font-size:12px;font-weight:700;padding:8px 4px;min-height:48px}
+.bottom-nav-item .icon{width:24px;height:24px}
+.bottom-nav-item.active{color:var(--primary)}
+.bottom-nav-item span{line-height:1}
+
+/* App cards & stats */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px}
+.stat-card .stat-label{font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.stat-card .stat-val{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--text);line-height:1}
+.stat-card .stat-val.sm{font-size:24px}
+.page-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.page-header h2{font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--text);margin:0;line-height:1.2}
+.page-header p{font-size:15px;color:var(--text-muted);margin:6px 0 0}
+.page-header-actions{display:flex;gap:10px;flex-wrap:wrap}
+.panel{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow-soft)}
+.panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.panel-title{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text);margin:0}
+.empty-state{padding:48px 24px;text-align:center;border:1.5px dashed #CBD5E1;border-radius:16px;background:#FBFCFE}
+.empty-state .empty-icon{width:64px;height:64px;border-radius:20px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;margin:0 auto 16px}
+.empty-state h3{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--text);margin:0 0 8px}
+.empty-state p{font-size:15px;color:var(--text-muted);margin:0 0 20px;max-width:420px;margin-inline:auto}
+
+/* List items */
+.list-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-soft);align-items:flex-start}
+.list-item:last-child{border-bottom:none;padding-bottom:0}
+.list-item-body{flex:1;min-width:0}
+.list-item-title{font-size:16px;font-weight:700;color:var(--text);margin:0 0 2px;font-family:var(--font-display)}
+.list-item-meta{font-size:14px;color:var(--text-muted)}
+.list-item-actions{display:flex;gap:6px;flex-shrink:0}
+
+/* Skeleton */
+.skeleton{background:linear-gradient(90deg,#EEF2F7 25%,#F8FAFC 37%,#EEF2F7 63%);background-size:400% 100%;animation:shimmer 1.4s ease infinite;border-radius:8px}
+.sk-card{height:280px;border-radius:20px}
+
+/* Responsive app */
+@media(max-width:1023px){
+  .app-shell.active{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .topbar{padding:0 20px;height:64px}
+  .topbar-title{font-size:20px}
+  .content{padding:20px 20px calc(var(--bottom-nav-h) + 24px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{display:block}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .stat-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .stat-card{padding:16px}
+  .stat-card .stat-val{font-size:26px}
+  .page-header h2{font-size:24px}
+  .panel{padding:20px;border-radius:16px}
+}
+
+/* Animations & utilities */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+@keyframes modalIn{from{opacity:0;transform:scale(.96) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes sheetIn{from{transform:translateY(24px)}to{transform:translateY(0)}}
+@keyframes toastIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.stagger > *{opacity:0;transform:translateY(16px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.stagger.visible > *:nth-child(1){transition-delay:.05s}.stagger.visible > *:nth-child(2){transition-delay:.1s}.stagger.visible > *:nth-child(3){transition-delay:.15s}.stagger.visible > *:nth-child(4){transition-delay:.2s}.stagger.visible > *:nth-child(5){transition-delay:.25s}.stagger.visible > *:nth-child(6){transition-delay:.3s}
+.stagger.visible > *{opacity:1;transform:translateY(0)}
+.text-muted{color:var(--text-muted)}.text-sm{font-size:14px}.text-center{text-align:center}
+.mt-8{margin-top:8px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mb-16{margin-bottom:16px}.mb-24{margin-bottom:24px}
+.gap-8{gap:8px}.flex{display:flex}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-between{justify-content:space-between}
+.hidden{display:none!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id='app-root'>
+
+<!-- ==================== LANDING PAGE ==================== -->
+<div id='landing-page'>
+  <nav class='landing-nav' id='landingNav'>
+    <div class='container nav-inner' style='position:relative'>
+      <a class='brand' href='#home' onclick='BW.scrollToSection("home");return false;'>
+        <span class='brand-mark' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg></span>
+        <span id='brandName'>Buku Workspace</span>
+      </a>
+      <div class='nav-links'>
+        <a href='#features' onclick='BW.scrollToSection("features");return false;'>Fitur</a>
+        <a href='#kelas' onclick='BW.scrollToSection("kelas");return false;'>Kelas</a>
+        <a href='#kebiasaan' onclick='BW.scrollToSection("kebiasaan");return false;'>Kebiasaan</a>
+        <a href='#katalog' onclick='BW.scrollToSection("katalog");return false;'>Katalog</a>
+        <a href='#harga' onclick='BW.scrollToSection("harga");return false;'>Harga</a>
+        <a href='#faq' onclick='BW.scrollToSection("faq");return false;'>FAQ</a>
+      </div>
+      <div class='nav-actions'>
+        <button class='btn btn-ghost hide-mobile' onclick='BW.openAuth("login")'>Masuk</button>
+        <button class='btn btn-primary hide-mobile' onclick='BW.openAuth("register")'>Mulai Gratis</button>
+        <button class='mobile-menu-btn' id='mobileMenuBtn' aria-label='Buka menu' onclick='BW.toggleMobileMenu()'>
+          <svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 6h18M3 12h18M3 18h18'/></svg>
+        </button>
+      </div>
+      <div class='mobile-drawer' id='mobileDrawer'>
+        <a href='#features' onclick='BW.scrollToSection("features");return false;'>Fitur</a>
+        <a href='#kelas' onclick='BW.scrollToSection("kelas");return false;'>Kelas Pendampingan</a>
+        <a href='#kebiasaan' onclick='BW.scrollToSection("kebiasaan");return false;'>Membangun Kebiasaan</a>
+        <a href='#katalog' onclick='BW.scrollToSection("katalog");return false;'>Buku Terbaru</a>
+        <a href='#harga' onclick='BW.scrollToSection("harga");return false;'>Harga</a>
+        <a href='#faq' onclick='BW.scrollToSection("faq");return false;'>FAQ</a>
+        <div class='drawer-actions'>
+          <button class='btn btn-secondary btn-block' onclick='BW.openAuth("login")'>Masuk</button>
+          <button class='btn btn-primary btn-block' onclick='BW.openAuth("register")'>Mulai Gratis</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class='hero' id='home'>
+    <div class='container hero-grid'>
+      <div class='fade-up'>
+        <div class='hero-eyebrow'><span style='width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block'></span> CMS Kelas Membaca Modern</div>
+        <h1 class='hero-title'>Bangun <span class='gradient-text'>kebiasaan membaca</span> yang bertahan lama.</h1>
+        <p class='hero-desc'>Buku Workspace membantu mentor, komunitas, dan pembaca mengelola kelas membaca, melacak progres, berdiskusi, dan menumbuhkan budaya literasi dalam satu platform yang cerah, bersih, dan mudah digunakan.</p>
+        <div class='hero-actions'>
+          <button class='btn btn-primary btn-lg' onclick='BW.openAuth("register")'>Mulai Membaca Gratis <svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M5 12h14M12 5l7 7-7 7'/></svg></button>
+          <button class='btn btn-secondary btn-lg' onclick='BW.scrollToSection("fitur")'>Lihat Fitur</button>
+        </div>
+        <div class='hero-meta'>
+          <div class='hero-meta-item'><span class='meta-icon'><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 11.08V12a10 10 0 1 1-5.93-9.14'/><path d='M22 4L12 14.01l-3-3'/></svg></span>Tanpa biaya server</div>
+          <div class='hero-meta-item'><span class='meta-icon'><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='4' width='18' height='18' rx='2'/><path d='M16 2v4M8 2v4M3 10h18'/></svg></span>CRUD Lengkap</div>
+          <div class='hero-meta-item'><span class='meta-icon'><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg></span>Mobile-first</div>
+        </div>
+      </div>
+      <div class='hero-visual fade-up'>
+        <div class='floating-chip chip-1'><span class='chip-dot'></span> 12 hari streak membaca</div>
+        <div class='hero-card'>
+          <div class='hero-mock-header'>
+            <div>
+              <div class='hero-mock-title'>Dashboard Membaca</div>
+              <div style='font-size:14px;color:var(--text-muted);margin-top:2px'>Progress minggu ini</div>
+            </div>
+            <span class='badge badge-mint'>Aktif</span>
+          </div>
+          <div class='hero-mock-stats'>
+            <div class='hero-mock-stat'><div class='val' id='heroStatBooks'>24</div><div class='lbl'>Buku</div></div>
+            <div class='hero-mock-stat'><div class='val' id='heroStatMembers'>128</div><div class='lbl'>Pembaca</div></div>
+            <div class='hero-mock-stat'><div class='val' id='heroStatLogs'>1.2k</div><div class='lbl'>Log Baca</div></div>
+          </div>
+          <div class='hero-mock-book'>
+            <div class='hero-mock-cover'>A</div>
+            <div style='flex:1;min-width:0'>
+              <h4>Atomic Habits</h4>
+              <p>James Clear • 68% selesai</p>
+              <div class='progress'><span style='width:68%'></span></div>
+            </div>
+          </div>
+          <div class='hero-mock-book' style='margin-bottom:0;background:linear-gradient(135deg,#F0FDF4,#ECFDF5)'>
+            <div class='hero-mock-cover' style='background:linear-gradient(135deg,#6EE7B7,#10B981)'>F</div>
+            <div style='flex:1;min-width:0'>
+              <h4>Filosofi Teras</h4>
+              <p>Henry Manampiring • 45% selesai</p>
+              <div class='progress'><span style='width:45%;background:linear-gradient(90deg,#10B981,#34D399)'></span></div>
+            </div>
+          </div>
+        </div>
+        <div class='floating-chip chip-2'><svg class='icon-sm' style='color:var(--amber)' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg> Kuis selesai: 95%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class='social-proof'>
+    <div class='container proof-grid stagger'>
+      <div class='proof-item'><div class='proof-val' data-count='500'>500+</div><div class='proof-lbl'>Pembaca aktif</div></div>
+      <div class='proof-item'><div class='proof-val' data-count='120'>120+</div><div class='proof-lbl'>Buku dikurasi</div></div>
+      <div class='proof-item'><div class='proof-val' data-count='3500'>3.5k+</div><div class='proof-lbl'>Log bacaan tercatat</div></div>
+      <div class='proof-item'><div class='proof-val' data-count='98'>98%</div><div class='proof-lbl'>Kepuasan pengguna</div></div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class='section' id='features'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>Fitur Unggulan</span>
+        <h2 class='section-title'>Semua yang Anda butuhkan untuk <span class='gradient-text'>kelas membaca</span></h2>
+        <p class='section-desc'>Dari katalog buku, jurnal bacaan, diskusi, hingga kuis pemahaman — semua terintegrasi dalam satu workspace yang rapi dan mudah digunakan.</p>
+      </div>
+      <div class='grid-3 stagger'>
+        <div class='feature-card'><div class='feature-icon purple'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg></div><h3>Katalog Buku &amp; Bab</h3><p>Kelola koleksi buku, cover, sinopsis, dan materi per bab. Peserta dapat membaca panduan terstruktur dengan nyaman.</p></div>
+        <div class='feature-card'><div class='feature-icon mint'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg></div><h3>Jurnal &amp; Reading Log</h3><p>Catat halaman, durasi, kutipan, dan refleksi. Pantau streak dan progres membaca harian secara visual.</p></div>
+        <div class='feature-card'><div class='feature-icon amber'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/></svg></div><h3>Diskusi &amp; Komunitas</h3><p>Ruang diskusi per buku dengan balasan, like, dan pin topik penting untuk menjaga percakapan tetap bermakna.</p></div>
+        <div class='feature-card'><div class='feature-icon sky'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/><line x1='12' y1='17' x2='12.01' y2='17'/></svg></div><h3>Kuis Pemahaman</h3><p>Buat kuis per buku, nilai otomatis, dan lihat hasil untuk mengukur pemahaman peserta secara objektif.</p></div>
+        <div class='feature-card'><div class='feature-icon rose'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2'/><circle cx='8.5' cy='8.5' r='1.5'/><path d='M21 15l-5-5L5 21'/></svg></div><h3>Upload Gambar ke Drive</h3><p>Unggah cover buku dan avatar langsung ke Google Drive. Bisa edit, ganti, hapus, dan tampil otomatis di aplikasi.</p></div>
+        <div class='feature-card'><div class='feature-icon purple'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg></div><h3>Peran &amp; Keamanan</h3><p>Akses Admin dan Member, validasi sesi, rate limit login, dan kontrol data yang aman untuk operasional kelas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kelas Pendampingan Membaca -->
+  <section class='section' id='kelas' style='background:#fff'>
+    <div class='container split'>
+      <div class='split-content fade-up'>
+        <span class='section-label'>Kelas Pendampingan Membaca</span>
+        <h2>Belajar membaca lebih dalam dengan pendampingan yang terarah.</h2>
+        <p>Kelas pendampingan Buku Workspace dirancang untuk membantu peserta tidak hanya membaca lebih banyak, tetapi juga memahami, merefleksikan, dan menerapkan isi bacaan dalam kehidupan.</p>
+        <ul class='check-list'>
+          <li><span class='check-icon'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M20 6L9 17l-5-5'/></svg></span><span><strong>Kurikulum bacaan terstruktur</strong> — bab demi bab dengan panduan diskusi dan target waktu baca.</span></li>
+          <li><span class='check-icon'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M20 6L9 17l-5-5'/></svg></span><span><strong>Pendampingan mentor</strong> — umpan balik, sorotan insight, dan moderasi diskusi yang hangat.</span></li>
+          <li><span class='check-icon'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M20 6L9 17l-5-5'/></svg></span><span><strong>Refleksi &amp; kuis</strong> — pastikan pemahaman, bukan sekadar menyelesaikan halaman.</span></li>
+          <li><span class='check-icon'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'><path d='M20 6L9 17l-5-5'/></svg></span><span><strong>Laporan progres</strong> — pantau perkembangan peserta dan rayakan pencapaian bersama.</span></li>
+        </ul>
+        <div style='margin-top:28px'><button class='btn btn-primary' onclick='BW.openAuth("register")'>Gabung Kelas Membaca</button></div>
+      </div>
+      <div class='split-visual fade-up'>
+        <div style='background:#fff;border-radius:18px;padding:24px;border:1px solid var(--border);box-shadow:var(--shadow-soft)'>
+          <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:20px'>
+            <div><div style='font-size:14px;color:var(--text-muted);font-weight:600'>Sesi Minggu Ini</div><div style='font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text)'>Kelas Atomic Habits</div></div>
+            <span class='badge badge-mint'>Berlangsung</span>
+          </div>
+          <div style='display:grid;gap:12px'>
+            <div style='display:flex;gap:12px;align-items:center;padding:14px;background:var(--bg);border-radius:12px'><div style='width:40px;height:40px;border-radius:10px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:800'>1</div><div style='flex:1'><div style='font-size:15px;font-weight:700;color:var(--text)'>Bab 1-2: Fondasi Kebiasaan</div><div style='font-size:13px;color:var(--text-muted)'>24 peserta selesai</div></div><span class='badge badge-mint'>Selesai</span></div>
+            <div style='display:flex;gap:12px;align-items:center;padding:14px;background:var(--bg);border-radius:12px'><div style='width:40px;height:40px;border-radius:10px;background:var(--amber-soft);color:var(--amber);display:grid;place-items:center;font-weight:800'>2</div><div style='flex:1'><div style='font-size:15px;font-weight:700;color:var(--text)'>Bab 3-4: Identitas &amp; Sistem</div><div style='font-size:13px;color:var(--text-muted)'>18 peserta sedang membaca</div></div><span class='badge badge-amber'>Aktif</span></div>
+            <div style='display:flex;gap:12px;align-items:center;padding:14px;background:var(--bg);border-radius:12px'><div style='width:40px;height:40px;border-radius:10px;background:var(--bg-soft);color:var(--text-light);display:grid;place-items:center;font-weight:800'>3</div><div style='flex:1'><div style='font-size:15px;font-weight:700;color:var(--text)'>Bab 5-6: Lingkungan</div><div style='font-size:13px;color:var(--text-muted)'>Mulai Senin depan</div></div><span class='badge badge-slate'>Mendatang</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membangun Kebiasaan Membaca -->
+  <section class='section' id='kebiasaan'>
+    <div class='container split reverse'>
+      <div class='split-content fade-up'>
+        <span class='section-label'>Membangun Kebiasaan Membaca</span>
+        <h2>Kecil, konsisten, dan terukur — itulah kunci kebiasaan membaca.</h2>
+        <p>Buku Workspace membantu Anda mengubah niat membaca menjadi rutinitas nyata dengan sistem yang mendukung setiap langkah kecil.</p>
+        <div class='habit-steps'>
+          <div class='habit-step'><div class='habit-step-num'>1</div><div><h4>Pilih buku yang tepat</h4><p>Kurasi katalog berdasarkan minat, level, dan tujuan membaca Anda.</p></div></div>
+          <div class='habit-step'><div class='habit-step-num'>2</div><div><h4>Catat progres harian</h4><p>Log halaman dan durasi baca dalam hitungan detik, langsung dari ponsel.</p></div></div>
+          <div class='habit-step'><div class='habit-step-num'>3</div><div><h4>Refleksi &amp; diskusi</h4><p>Tulis kutipan, insight, dan diskusikan bersama komunitas agar bacaan melekat.</p></div></div>
+          <div class='habit-step'><div class='habit-step-num'>4</div><div><h4>Rayakan pencapaian</h4><p>Lihat streak, statistik, dan hasil kuis untuk menjaga motivasi tetap tinggi.</p></div></div>
+        </div>
+      </div>
+      <div class='split-visual fade-up'>
+        <div style='background:#fff;border-radius:18px;padding:24px;border:1px solid var(--border);box-shadow:var(--shadow-soft)'>
+          <div style='font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--text);margin-bottom:16px'>Streak Membaca Anda</div>
+          <div style='display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:20px'>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Sen</div><div style='height:40px;border-radius:10px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-weight:700'>✓</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Sel</div><div style='height:40px;border-radius:10px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-weight:700'>✓</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Rab</div><div style='height:40px;border-radius:10px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-weight:700'>✓</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Kam</div><div style='height:40px;border-radius:10px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-weight:700'>✓</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Jum</div><div style='height:40px;border-radius:10px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:700'>•</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Sab</div><div style='height:40px;border-radius:10px;background:var(--bg-soft);color:var(--text-light);display:grid;place-items:center;font-weight:700'>–</div></div>
+            <div style='text-align:center'><div style='font-size:12px;color:var(--text-light);margin-bottom:6px;font-weight:600'>Min</div><div style='height:40px;border-radius:10px;background:var(--bg-soft);color:var(--text-light);display:grid;place-items:center;font-weight:700'>–</div></div>
+          </div>
+          <div style='background:linear-gradient(135deg,#EEF2FF,#F8FAFF);border-radius:14px;padding:18px;display:flex;gap:14px;align-items:center'>
+            <div style='width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--amber);box-shadow:var(--shadow-soft)'><svg class='icon-lg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/></svg></div>
+            <div><div style='font-size:16px;font-weight:800;color:var(--text);font-family:var(--font-display)'>4 hari berturut-turut!</div><div style='font-size:14px;color:var(--text-muted)'>Baca 15 menit lagi hari ini untuk menjaga streak.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class='section' id='benefits' style='background:#fff'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>Manfaat</span>
+        <h2 class='section-title'>Kenapa memilih <span class='gradient-text'>Buku Workspace</span>?</h2>
+        <p class='section-desc'>Didesain untuk dampak nyata: lebih mudah dikelola, lebih nyaman dibaca, dan lebih efektif membangun budaya literasi.</p>
+      </div>
+      <div class='grid-4 stagger'>
+        <div class='feature-card' style='text-align:center'><div class='feature-icon purple' style='margin-inline:auto'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/></svg></div><h3>Cepat &amp; Ringan</h3><p>SPA tanpa reload, data tersinkron ke Google Spreadsheet dengan respons cepat.</p></div>
+        <div class='feature-card' style='text-align:center'><div class='feature-icon mint' style='margin-inline:auto'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/></svg></div><h3>Kolaboratif</h3><p>Diskusi, refleksi, dan kuis membuat pembelajaran membaca lebih hidup.</p></div>
+        <div class='feature-card' style='text-align:center'><div class='feature-icon amber' style='margin-inline:auto'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='2' y='3' width='20' height='14' rx='2'/><line x1='8' y1='21' x2='16' y2='21'/><line x1='12' y1='17' x2='12' y2='21'/></svg></div><h3>Desktop &amp; Mobile</h3><p>Nyaman di layar besar maupun ponsel dengan tipografi besar dan touch-friendly.</p></div>
+        <div class='feature-card' style='text-align:center'><div class='feature-icon sky' style='margin-inline:auto'><svg class='icon-lg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/></svg></div><h3>Tanpa Server Mahal</h3><p>Berbasis Google Spreadsheet + Apps Script + Drive, hemat biaya operasional.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buku Bacaan Terbaru (Pustaloka style) -->
+  <section class='section' id='katalog'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>Katalog Pustaloka</span>
+        <h2 class='section-title'>Buku bacaan <span class='gradient-text'>terbaru</span></h2>
+        <p class='section-desc'>Pilihan buku yang dikurasi untuk menemani perjalanan membaca Anda. Dari pengembangan diri, fiksi, hingga literasi profesional.</p>
+      </div>
+      <div class='grid-4 stagger' id='landingBookGrid'>
+        <!-- Filled by JS; fallback cards below -->
+        <div class='book-card'>
+          <div class='book-cover'><div class='book-cover-placeholder'>Atomic Habits</div><span class='book-badge badge badge-mint'>Populer</span></div>
+          <div class='book-body'><div class='book-cat'>Pengembangan Diri</div><h3 class='book-title'>Atomic Habits</h3><p class='book-author'>James Clear</p><div class='book-meta'><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg> 320 hal</span><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg> 8 bab</span></div></div>
+          <div class='book-actions'><button class='btn btn-secondary btn-sm' onclick='BW.openAuth("register")'>Mulai Baca</button></div>
+        </div>
+        <div class='book-card'>
+          <div class='book-cover'><div class='book-cover-placeholder' style='background:linear-gradient(135deg,#D1FAE5,#A7F3D0);color:#065F46'>Filosofi Teras</div><span class='book-badge badge badge-amber'>Favorit</span></div>
+          <div class='book-body'><div class='book-cat'>Filsafat</div><h3 class='book-title'>Filosofi Teras</h3><p class='book-author'>Henry Manampiring</p><div class='book-meta'><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg> 346 hal</span><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg> 12 bab</span></div></div>
+          <div class='book-actions'><button class='btn btn-secondary btn-sm' onclick='BW.openAuth("register")'>Mulai Baca</button></div>
+        </div>
+        <div class='book-card'>
+          <div class='book-cover'><div class='book-cover-placeholder' style='background:linear-gradient(135deg,#FEF3C7,#FDE68A);color:#92400E'>Psychology of Money</div></div>
+          <div class='book-body'><div class='book-cat'>Keuangan</div><h3 class='book-title'>The Psychology of Money</h3><p class='book-author'>Morgan Housel</p><div class='book-meta'><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg> 256 hal</span><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg> 10 bab</span></div></div>
+          <div class='book-actions'><button class='btn btn-secondary btn-sm' onclick='BW.openAuth("register")'>Mulai Baca</button></div>
+        </div>
+        <div class='book-card'>
+          <div class='book-cover'><div class='book-cover-placeholder' style='background:linear-gradient(135deg,#DBEAFE,#BFDBFE);color:#1E40AF'>Deep Work</div><span class='book-badge badge badge-primary'>Baru</span></div>
+          <div class='book-body'><div class='book-cat'>Produktivitas</div><h3 class='book-title'>Deep Work</h3><p class='book-author'>Cal Newport</p><div class='book-meta'><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg> 304 hal</span><span><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg> 9 bab</span></div></div>
+          <div class='book-actions'><button class='btn btn-secondary btn-sm' onclick='BW.openAuth("register")'>Mulai Baca</button></div>
+        </div>
+      </div>
+      <div class='text-center mt-24'><button class='btn btn-primary' onclick='BW.openAuth("register")'>Lihat Semua Buku</button></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class='section' id='testimonials' style='background:#fff'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>Testimoni</span>
+        <h2 class='section-title'>Dicintai oleh <span class='gradient-text'>pembaca &amp; mentor</span></h2>
+        <p class='section-desc'>Cerita nyata dari komunitas yang membangun kebiasaan membaca bersama Buku Workspace.</p>
+      </div>
+      <div class='grid-3 stagger'>
+        <div class='testimonial-card'><div class='testimonial-stars'>★★★★★</div><p>"Akhirnya ada platform yang bikin kelas membaca kami rapi. Log harian, diskusi, dan kuisnya sangat membantu peserta tetap konsisten."</p><div class='testimonial-author'><div class='avatar'>AR</div><div><strong>Ayu Rahmawati</strong><span>Mentor Komunitas Baca</span></div></div></div>
+        <div class='testimonial-card'><div class='testimonial-stars'>★★★★★</div><p>"Tampilan bersih dan mudah dipakai di HP. Saya jadi lebih semangat catat progres baca setiap hari. Fitur streak-nya bikin nagih!"</p><div class='testimonial-author'><div class='avatar' style='background:linear-gradient(135deg,#A7F3D0,#6EE7B7);color:#065F46'>DN</div><div><strong>Dimas Nugroho</strong><span>Peserta Kelas Membaca</span></div></div></div>
+        <div class='testimonial-card'><div class='testimonial-stars'>★★★★★</div><p>"CRUD-nya lengkap, upload cover ke Drive gampang, dan data tersimpan rapi di Spreadsheet. Cocok banget untuk komunitas kami."</p><div class='testimonial-author'><div class='avatar' style='background:linear-gradient(135deg,#FDE68A,#FCD34D);color:#92400E'>SR</div><div><strong>Sari Prameswari</strong><span>Pengelola Klub Literasi</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class='section' id='harga'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>Harga</span>
+        <h2 class='section-title'>Paket sederhana, <span class='gradient-text'>nilai maksimal</span></h2>
+        <p class='section-desc'>Mulai gratis, tingkatkan saat komunitas Anda bertumbuh. Tanpa biaya tersembunyi.</p>
+      </div>
+      <div class='grid-3 stagger' style='max-width:1040px;margin:0 auto'>
+        <div class='pricing-card'>
+          <div class='pricing-name'>Starter</div>
+          <div class='pricing-desc'>Untuk pembaca individu yang ingin membangun kebiasaan.</div>
+          <div class='pricing-price'>Gratis</div>
+          <div class='pricing-period'>Selamanya untuk pemula</div>
+          <ul class='pricing-list'>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Akses katalog buku publik</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Jurnal baca &amp; streak</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Ikut diskusi komunitas</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Kerjakan kuis</li>
+          </ul>
+          <button class='btn btn-secondary btn-block' onclick='BW.openAuth("register")'>Mulai Gratis</button>
+        </div>
+        <div class='pricing-card featured'>
+          <div class='pricing-pop'>Paling Populer</div>
+          <div class='pricing-name'>Komunitas</div>
+          <div class='pricing-desc'>Untuk klub baca dan kelas kecil yang ingin tumbuh bersama.</div>
+          <div class='pricing-price'>Rp149k <span>/bulan</span></div>
+          <div class='pricing-period'>Ditagih bulanan, bisa batal kapan saja</div>
+          <ul class='pricing-list'>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Semua fitur Starter</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Kelola kelas &amp; anggota</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>CRUD buku, bab, kuis</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Upload gambar ke Drive</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Dashboard analitik admin</li>
+          </ul>
+          <button class='btn btn-primary btn-block' onclick='BW.openAuth("register")'>Pilih Komunitas</button>
+        </div>
+        <div class='pricing-card'>
+          <div class='pricing-name'>Institusi</div>
+          <div class='pricing-desc'>Untuk sekolah, kampus, atau organisasi dengan skala besar.</div>
+          <div class='pricing-price'>Custom</div>
+          <div class='pricing-period'>Disesuaikan kebutuhan Anda</div>
+          <ul class='pricing-list'>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Semua fitur Komunitas</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Multi-mentor &amp; multi-kelas</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Onboarding &amp; pelatihan</li>
+            <li><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M20 6L9 17l-5-5'/></svg>Dukungan prioritas</li>
+          </ul>
+          <button class='btn btn-secondary btn-block' onclick='BW.scrollToSection("cta")'>Hubungi Kami</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class='section' id='faq' style='background:#fff'>
+    <div class='container'>
+      <div class='section-head fade-up'>
+        <span class='section-label'>FAQ</span>
+        <h2 class='section-title'>Pertanyaan yang sering <span class='gradient-text'>ditanyakan</span></h2>
+        <p class='section-desc'>Jawaban singkat untuk membantu Anda memulai dengan cepat.</p>
+      </div>
+      <div class='faq-list fade-up' id='faqList'>
+        <div class='faq-item open'><button class='faq-q' onclick='BW.toggleFaq(this)'>Apa itu Buku Workspace?<span class='faq-icon'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 5v14M5 12h14'/></svg></span></button><div class='faq-a'>Buku Workspace adalah CMS Kelas Membaca berbasis Single Page Application yang membantu mentor dan komunitas mengelola buku, bab, jurnal baca, diskusi, dan kuis dalam satu platform modern.</div></div>
+        <div class='faq-item'><button class='faq-q' onclick='BW.toggleFaq(this)'>Apakah data benar-benar tersimpan di Google Spreadsheet?<span class='faq-icon'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 5v14M5 12h14'/></svg></span></button><div class='faq-a'>Ya. Seluruh data CRUD disimpan di Google Spreadsheet melalui REST API Google Apps Script. Anda juga dapat mengunggah gambar cover/avatar ke Google Drive.</div></div>
+        <div class='faq-item'><button class='faq-q' onclick='BW.toggleFaq(this)'>Bisakah upload, edit, dan hapus gambar?<span class='faq-icon'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 5v14M5 12h14'/></svg></span></button><div class='faq-a'>Bisa. Anda dapat mengunggah gambar (JPG, PNG, WEBP, GIF), menyimpannya ke Google Drive, mengganti gambar saat edit, menghapus gambar, dan menampilkannya kembali di aplikasi.</div></div>
+        <div class='faq-item'><button class='faq-q' onclick='BW.toggleFaq(this)'>Apakah bisa digunakan di HP?<span class='faq-icon'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 5v14M5 12h14'/></svg></span></button><div class='faq-a'>Sangat bisa. Desain mobile-first dengan bottom navigation, tombol besar, tipografi minimal 14px, dan modal bottom sheet di layar kecil.</div></div>
+        <div class='faq-item'><button class='faq-q' onclick='BW.toggleFaq(this)'>Bagaimana cara instalasi?<span class='faq-icon'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 5v14M5 12h14'/></svg></span></button><div class='faq-a'>Salin <code>code.gs</code> ke Google Apps Script, jalankan <code>setupDatabase()</code>, deploy sebagai Web App, lalu tempel URL API ke <code>theme.xml</code> dan pasang di Blogger. Panduan lengkap ada di file panduan.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class='cta-section' id='cta'>
+    <div class='container'>
+      <div class='cta-box fade-up'>
+        <h2>Siap membangun kebiasaan membaca yang lebih baik?</h2>
+        <p>Mulai kelola kelas membaca, catat progres, dan tumbuhkan komunitas literasi Anda bersama Buku Workspace hari ini.</p>
+        <div class='cta-actions'>
+          <button class='btn btn-primary btn-lg' onclick='BW.openAuth("register")'>Mulai Gratis Sekarang</button>
+          <button class='btn btn-secondary btn-lg' onclick='BW.openAuth("login")'>Saya Sudah Punya Akun</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class='footer'>
+    <div class='container'>
+      <div class='footer-grid'>
+        <div class='footer-brand'>
+          <a class='brand' href='#home' onclick='BW.scrollToSection("home");return false;'><span class='brand-mark' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg></span><span>Buku Workspace</span></a>
+          <p>CMS Kelas Membaca modern untuk membangun kebiasaan membaca, mengelola komunitas literasi, dan menumbuhkan wawasan bersama.</p>
+        </div>
+        <div><h4>Produk</h4><ul><li><a href='#features' onclick='BW.scrollToSection("features");return false;'>Fitur</a></li><li><a href='#kelas' onclick='BW.scrollToSection("kelas");return false;'>Kelas Pendampingan</a></li><li><a href='#katalog' onclick='BW.scrollToSection("katalog");return false;'>Katalog Buku</a></li><li><a href='#harga' onclick='BW.scrollToSection("harga");return false;'>Harga</a></li></ul></div>
+        <div><h4>Sumber Daya</h4><ul><li><a href='#faq' onclick='BW.scrollToSection("faq");return false;'>FAQ</a></li><li><a href='#kebiasaan' onclick='BW.scrollToSection("kebiasaan");return false;'>Kebiasaan Membaca</a></li><li><a href='#testimonials' onclick='BW.scrollToSection("testimonials");return false;'>Testimoni</a></li></ul></div>
+        <div><h4>Mulai</h4><ul><li><a href='#' onclick='BW.openAuth("register");return false;'>Daftar Gratis</a></li><li><a href='#' onclick='BW.openAuth("login");return false;'>Masuk</a></li><li><a href='#cta' onclick='BW.scrollToSection("cta");return false;'>Hubungi Kami</a></li></ul></div>
+      </div>
+      <div class='footer-bottom'>
+        <span>&#169; 2026 Buku Workspace. All rights reserved.</span>
+        <span>Dibuat dengan ❤️ untuk komunitas literasi.</span>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- ==================== END LANDING PAGE ==================== -->
+
+<!-- ==================== APP SHELL ==================== -->
+<div class='app-shell' id='appShell'>
+  <aside class='sidebar' id='sidebar'>
+    <div class='sidebar-brand'><span class='brand-mark' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg></span><span>Buku Workspace</span></div>
+    <nav class='sidebar-nav' id='sidebarNav'>
+      <button class='sidebar-link active' data-route='dashboard' onclick='BW.navigate("dashboard")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='3' width='7' height='7'/><rect x='14' y='3' width='7' height='7'/><rect x='14' y='14' width='7' height='7'/><rect x='3' y='14' width='7' height='7'/></svg>Dashboard</button>
+      <button class='sidebar-link' data-route='books' onclick='BW.navigate("books")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg>Katalog Buku</button>
+      <button class='sidebar-link' data-route='logs' onclick='BW.navigate("logs")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg>Jurnal Baca</button>
+      <button class='sidebar-link' data-route='discussions' onclick='BW.navigate("discussions")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/></svg>Diskusi</button>
+      <button class='sidebar-link' data-route='quizzes' onclick='BW.navigate("quizzes")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/><line x1='12' y1='17' x2='12.01' y2='17'/></svg>Kuis</button>
+      <div class='sidebar-section admin-only' id='adminSectionLabel'>Admin</div>
+      <button class='sidebar-link admin-only' data-route='users' onclick='BW.navigate("users")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/></svg>Pengguna</button>
+      <button class='sidebar-link admin-only' data-route='settings' onclick='BW.navigate("settings")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z'/></svg>Pengaturan</button>
+    </nav>
+    <div class='sidebar-footer'>
+      <div class='user-chip'>
+        <div class='avatar sm' id='sidebarAvatar'>U</div>
+        <div class='user-chip-info'><strong id='sidebarUserName'>Pengguna</strong><span id='sidebarUserRole'>member</span></div>
+      </div>
+      <button class='btn btn-ghost btn-sm btn-block' onclick='BW.logout()'><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>Keluar</button>
+    </div>
+  </aside>
+  <div class='main-wrap'>
+    <header class='topbar'>
+      <div class='topbar-left'>
+        <div style='min-width:0'>
+          <h1 class='topbar-title' id='topbarTitle'>Dashboard</h1>
+          <div class='topbar-sub' id='topbarSub'>Selamat datang di Buku Workspace</div>
+        </div>
+      </div>
+      <div class='topbar-right'>
+        <button class='btn btn-secondary btn-sm' onclick='BW.refreshData()' title='Refresh data'><svg class='icon-sm' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><polyline points='23 4 23 10 17 10'/><polyline points='1 20 1 14 7 14'/><path d='M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15'/></svg><span class='hide-mobile'>Refresh</span></button>
+        <div class='avatar sm' id='topbarAvatar' style='cursor:pointer' onclick='BW.navigate("profile")'>U</div>
+      </div>
+    </header>
+    <main class='content'><div class='content-inner' id='appContent'></div></main>
+  </div>
+  <nav class='bottom-nav' id='bottomNav'>
+    <div class='bottom-nav-inner'>
+      <button class='bottom-nav-item active' data-route='dashboard' onclick='BW.navigate("dashboard")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='3' width='7' height='7'/><rect x='14' y='3' width='7' height='7'/><rect x='14' y='14' width='7' height='7'/><rect x='3' y='14' width='7' height='7'/></svg><span>Beranda</span></button>
+      <button class='bottom-nav-item' data-route='books' onclick='BW.navigate("books")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg><span>Buku</span></button>
+      <button class='bottom-nav-item' data-route='logs' onclick='BW.navigate("logs")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M12 20h9'/><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/></svg><span>Jurnal</span></button>
+      <button class='bottom-nav-item' data-route='discussions' onclick='BW.navigate("discussions")'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/></svg><span>Diskusi</span></button>
+      <button class='bottom-nav-item' data-route='more' onclick='BW.openMoreMenu()'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='1'/><circle cx='19' cy='12' r='1'/><circle cx='5' cy='12' r='1'/></svg><span>Lainnya</span></button>
+    </div>
+  </nav>
+</div>
+<!-- ==================== END APP SHELL ==================== -->
+
+<div class='modal-backdrop' id='modalBackdrop' aria-hidden='true'>
+  <div class='modal' id='modalBox' role='dialog' aria-modal='true' aria-labelledby='modalTitle'>
+    <div class='modal-header'>
+      <div><h3 class='modal-title' id='modalTitle'>Modal</h3><div class='modal-sub' id='modalSub'></div></div>
+      <button class='modal-close' onclick='BW.closeModal()' aria-label='Tutup'><svg class='icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M18 6L6 18M6 6l12 12'/></svg></button>
+    </div>
+    <div class='modal-body' id='modalBody'></div>
+    <div class='modal-footer' id='modalFooter'></div>
+  </div>
+</div>
+<div class='toast-wrap' id='toastWrap' aria-live='polite'></div>
+
+<script>
+//<![CDATA[
+/* ============================================================
+   BUKU WORKSPACE - SPA APPLICATION
+   ============================================================ */
+(function(){
+'use strict';
+
+const CONFIG = {
+  API_URL: '', // <-- ISI URL Web App Google Apps Script Anda di sini, contoh: 'https://script.google.com/macros/s/DEPLOYMENT_ID/exec'
+  APP_NAME: 'Buku Workspace',
+  VERSION: '2.0.0',
+  CACHE_KEY: 'bw2_cache',
+  TOKEN_KEY: 'bw2_token',
+  USER_KEY: 'bw2_user'
+};
+
+const S = {
+  user: null,
+  token: localStorage.getItem(CONFIG.TOKEN_KEY) || '',
+  route: 'dashboard',
+  routeParam: null,
+  settings: {},
+  books: [],
+  chapters: [],
+  discussions: [],
+  quizzes: [],
+  myLogs: [],
+  myQuizResults: [],
+  publicLogs: [],
+  users: [],
+  allLogs: [],
+  allQuizResults: [],
+  stats: {},
+  loading: false,
+  cache: null
+};
+
+const $ = (sel, ctx=document) => ctx.querySelector(sel);
+const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+const esc = (s='') => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+const uid = () => 'tmp_' + Math.random().toString(36).slice(2,10);
+const fmtDate = (iso) => { if(!iso) return '-'; const d=new Date(iso); if(isNaN(d)) return iso; return d.toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'}); };
+const fmtDateTime = (iso) => { if(!iso) return '-'; const d=new Date(iso); if(isNaN(d)) return iso; return d.toLocaleString('id-ID',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); };
+const isAdmin = () => S.user && String(S.user.role).toLowerCase() === 'admin';
+const pageTitle = (t) => { document.title = t ? t + ' — ' + CONFIG.APP_NAME : CONFIG.APP_NAME; };
+
+function toast(msg, type='success') {
+  const wrap = $('#toastWrap');
+  const el = document.createElement('div');
+  el.className = 'toast ' + (type==='error'?'error':type==='warn'?'warn':'success');
+  el.innerHTML = '<div class="toast-msg">'+esc(msg)+'</div>';
+  wrap.appendChild(el);
+  setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateY(-8px)'; setTimeout(()=>el.remove(),250); }, 3400);
+}
+
+function setBtnLoading(btn, loading, label) {
+  if(!btn) return;
+  if(loading){ btn.disabled=true; btn.dataset.orig=btn.innerHTML; btn.innerHTML='<span class="spinner"></span>'+(label?esc(label):'Memproses...'); }
+  else { btn.disabled=false; if(btn.dataset.orig){ btn.innerHTML=btn.dataset.orig; delete btn.dataset.orig; } }
+}
+
+async function api(action, data={}, method='POST') {
+  if(!CONFIG.API_URL) throw new Error('API_URL belum diatur. Buka file theme.xml dan isi CONFIG.API_URL dengan URL Web App Apps Script Anda.');
+  const payload = Object.assign({ action, token: S.token, data }, {});
+  // use POST with text/plain to avoid CORS preflight on Apps Script
+  const res = await fetch(CONFIG.API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  });
+  const text = await res.text();
+  let json;
+  try { json = JSON.parse(text); } catch(e) { throw new Error('Respons server tidak valid.'); }
+  if(!json.success) {
+    const err = new Error(json.message || 'Terjadi kesalahan.');
+    err.code = json.code; err.data = json.data;
+    throw err;
+  }
+  return json.data;
+}
+
+async function apiGet(action, params={}) {
+  if(!CONFIG.API_URL) throw new Error('API_URL belum diatur.');
+  const u = new URL(CONFIG.API_URL);
+  u.searchParams.set('action', action);
+  if(S.token) u.searchParams.set('token', S.token);
+  Object.keys(params).forEach(k=>{ if(params[k]!==undefined&&params[k]!==null) u.searchParams.set(k, params[k]); });
+  const res = await fetch(u.toString());
+  const json = await res.json();
+  if(!json.success) throw new Error(json.message || 'Gagal memuat data.');
+  return json.data;
+}
+
+function saveSession() {
+  if(S.token) localStorage.setItem(CONFIG.TOKEN_KEY, S.token); else localStorage.removeItem(CONFIG.TOKEN_KEY);
+  if(S.user) localStorage.setItem(CONFIG.USER_KEY, JSON.stringify(S.user)); else localStorage.removeItem(CONFIG.USER_KEY);
+}
+function loadSession() {
+  try { S.user = JSON.parse(localStorage.getItem(CONFIG.USER_KEY) || 'null'); } catch(e){ S.user=null; }
+  S.token = localStorage.getItem(CONFIG.TOKEN_KEY) || '';
+}
+function clearSession() { S.token=''; S.user=null; saveSession(); }
+
+function cacheSet(data){ try{ localStorage.setItem(CONFIG.CACHE_KEY, JSON.stringify({t:Date.now(),d:data})); }catch(e){} }
+function cacheGet(){ try{ const r=JSON.parse(localStorage.getItem(CONFIG.CACHE_KEY)||'null'); return r&&r.d?r.d:null; }catch(e){ return null; } }
+
+/* ---------- Modal ---------- */
+function openModal({title, sub='', body='', footer='', size=''}) {
+  $('#modalTitle').textContent = title || '';
+  $('#modalSub').textContent = sub || '';
+  $('#modalSub').style.display = sub ? '' : 'none';
+  $('#modalBody').innerHTML = body;
+  $('#modalFooter').innerHTML = footer;
+  $('#modalFooter').style.display = footer ? '' : 'none';
+  const box = $('#modalBox');
+  box.className = 'modal' + (size ? ' modal-' + size : '');
+  $('#modalBackdrop').classList.add('open');
+  document.body.classList.add('modal-open');
+}
+function closeModal() {
+  $('#modalBackdrop').classList.remove('open');
+  document.body.classList.remove('modal-open');
+}
+$('#modalBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='modalBackdrop') closeModal(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+
+function confirmDialog({title='Konfirmasi', message='Yakin?', confirmText='Hapus', confirmClass='btn-danger', onConfirm}) {
+  openModal({
+    title, sub:'', size:'sm',
+    body: `<p style="font-size:16px;color:var(--text-body);margin:0;line-height:1.7">${esc(message)}</p>`,
+    footer: `<button class="btn btn-secondary" id="confirmCancelBtn">Batal</button><button class="btn ${confirmClass}" id="confirmOkBtn">${esc(confirmText)}</button>`
+  });
+  $('#confirmCancelBtn').onclick = closeModal;
+  $('#confirmOkBtn').onclick = async () => {
+    const btn = $('#confirmOkBtn');
+    setBtnLoading(btn, true, 'Memproses...');
+    try { await onConfirm(); closeModal(); } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+/* ---------- Image helpers ---------- */
+function readFileAsDataURL(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(r.result);
+    r.onerror = () => reject(new Error('Gagal membaca file.'));
+    r.readAsDataURL(file);
+  });
+}
+async function fileToImagePayload(file, maxDim=1400, quality=0.85) {
+  if(!file) return null;
+  const allowed = ['image/jpeg','image/png','image/webp','image/gif'];
+  if(!allowed.includes(file.type)) throw new Error('Format gambar harus JPG, PNG, WEBP, atau GIF.');
+  if(file.size > 4 * 1024 * 1024) throw new Error('Ukuran gambar maksimal 4MB.');
+  // GIF: skip canvas resize to preserve animation
+  if(file.type === 'image/gif') {
+    const dataUrl = await readFileAsDataURL(file);
+    return { image_base64: dataUrl, filename: file.name, mime_type: file.type };
+  }
+  const dataUrl = await readFileAsDataURL(file);
+  const img = await new Promise((resolve, reject)=>{ const i=new Image(); i.onload=()=>resolve(i); i.onerror=()=>reject(new Error('Gambar tidak valid.')); i.src=dataUrl; });
+  let {width:w, height:h} = img;
+  const scale = Math.min(1, maxDim / Math.max(w,h));
+  w = Math.round(w*scale); h = Math.round(h*scale);
+  const c = document.createElement('canvas'); c.width=w; c.height=h;
+  c.getContext('2d').drawImage(img,0,0,w,h);
+  const mime = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
+  const out = c.toDataURL(mime, quality);
+  return { image_base64: out, filename: file.name.replace(/\.[^.]+$/, '') + (mime==='image/png'?'.png':'.jpg'), mime_type: mime };
+}
+
+function bindImageUpload(containerId, opts={}) {
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const input = wrap.querySelector('input[type=file]');
+  const preview = wrap.querySelector('[data-preview]');
+  const placeholder = wrap.querySelector('[data-placeholder]');
+  const removeBtn = wrap.querySelector('[data-remove]');
+  const status = wrap.querySelector('[data-status]');
+  let payload = null;
+  let removed = false;
+  wrap._getPayload = () => payload;
+  wrap._isRemoved = () => removed;
+  wrap._reset = () => { payload=null; removed=false; input.value=''; if(preview){preview.src=opts.currentUrl||''; preview.style.display=opts.currentUrl?'block':'none';} if(placeholder) placeholder.style.display=opts.currentUrl?'none':''; if(status) status.textContent=''; };
+  if(input) input.addEventListener('change', async (e)=>{
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    try {
+      if(status) status.textContent = 'Memproses gambar...';
+      payload = await fileToImagePayload(file);
+      removed = false;
+      if(preview){ preview.src = payload.image_base64; preview.style.display='block'; }
+      if(placeholder) placeholder.style.display='none';
+      if(status) status.textContent = 'Gambar siap diunggah.';
+    } catch(err){ toast(err.message,'error'); if(status) status.textContent=''; input.value=''; }
+  });
+  if(removeBtn) removeBtn.addEventListener('click', ()=>{
+    payload = null; removed = true; input.value='';
+    if(preview){ preview.src=''; preview.style.display='none'; }
+    if(placeholder) placeholder.style.display='';
+    if(status) status.textContent = 'Gambar akan dihapus saat disimpan.';
+  });
+  return wrap;
+}
+
+/* ---------- State mapping ---------- */
+function applyInitData(data) {
+  if(!data) return;
+  S.settings = data.settings || S.settings || {};
+  S.books = data.books || [];
+  S.chapters = data.chapters || [];
+  S.discussions = data.discussions || [];
+  S.quizzes = data.quizzes || [];
+  S.myLogs = data.myLogs || [];
+  S.myQuizResults = data.myQuizResults || [];
+  S.publicLogs = data.publicLogs || [];
+  S.stats = data.stats || {};
+  if(data.currentUser) { S.user = Object.assign({}, S.user||{}, data.currentUser); saveSession(); }
+  if(data.users) S.users = data.users;
+  if(data.allLogs) S.allLogs = data.allLogs;
+  if(data.allQuizResults) S.allQuizResults = data.allQuizResults;
+  cacheSet(data);
+}
+
+/* ---------- Navigation ---------- */
+const ROUTES = {
+  dashboard: { title:'Dashboard', sub:'Ringkasan aktivitas membaca Anda' },
+  books: { title:'Katalog Buku', sub:'Kelola dan jelajahi koleksi buku' },
+  bookDetail: { title:'Detail Buku', sub:'Informasi buku, bab, dan aktivitas' },
+  logs: { title:'Jurnal Baca', sub:'Catat dan pantau progres membaca Anda' },
+  discussions: { title:'Diskusi', sub:'Ruang percakapan komunitas baca' },
+  quizzes: { title:'Kuis', sub:'Uji pemahaman bacaan Anda' },
+  users: { title:'Pengguna', sub:'Kelola anggota workspace', admin:true },
+  settings: { title:'Pengaturan', sub:'Konfigurasi workspace', admin:true },
+  profile: { title:'Profil Saya', sub:'Kelola informasi akun Anda' }
+};
+
+function navigate(route, param=null) {
+  if(ROUTES[route] && ROUTES[route].admin && !isAdmin()) { toast('Akses khusus admin.','warn'); return; }
+  S.route = route; S.routeParam = param;
+  location.hash = '#/' + route + (param ? '/' + encodeURIComponent(param) : '');
+  renderRoute();
+}
+function renderRoute() {
+  const r = ROUTES[S.route] || ROUTES.dashboard;
+  $('#topbarTitle').textContent = r.title;
+  $('#topbarSub').textContent = r.sub;
+  pageTitle(r.title);
+  $$('.sidebar-link').forEach(b=>b.classList.toggle('active', b.dataset.route===S.route || (S.route==='bookDetail'&&b.dataset.route==='books')));
+  $$('.bottom-nav-item').forEach(b=>b.classList.toggle('active', b.dataset.route===S.route || (S.route==='bookDetail'&&b.dataset.route==='books') || (['users','settings','profile','quizzes'].includes(S.route)&&b.dataset.route==='more')));
+  $$('.admin-only').forEach(el=>el.style.display = isAdmin() ? '' : 'none');
+  updateUserUI();
+  const content = $('#appContent');
+  content.style.opacity='0'; content.style.transform='translateY(8px)';
+  setTimeout(()=>{
+    try {
+      switch(S.route){
+        case 'dashboard': renderDashboard(content); break;
+        case 'books': renderBooks(content); break;
+        case 'bookDetail': renderBookDetail(content, S.routeParam); break;
+        case 'logs': renderLogs(content); break;
+        case 'discussions': renderDiscussions(content); break;
+        case 'quizzes': renderQuizzes(content); break;
+        case 'users': renderUsers(content); break;
+        case 'settings': renderSettings(content); break;
+        case 'profile': renderProfile(content); break;
+        default: renderDashboard(content);
+      }
+    } catch(e){ console.error(e); content.innerHTML = `<div class="panel"><p style="color:var(--rose);font-weight:600">Gagal merender halaman: ${esc(e.message)}</p></div>`; }
+    content.style.transition='opacity .22s cubic-bezier(.16,1,.3,1), transform .22s cubic-bezier(.16,1,.3,1)';
+    requestAnimationFrame(()=>{ content.style.opacity='1'; content.style.transform='translateY(0)'; });
+  }, 30);
+}
+
+function updateUserUI() {
+  const name = S.user ? S.user.name : 'Tamu';
+  const role = S.user ? S.user.role : 'guest';
+  const initial = (name||'U').trim().charAt(0).toUpperCase();
+  $('#sidebarUserName').textContent = name;
+  $('#sidebarUserRole').textContent = role;
+  const setAvatar = (el) => {
+    if(!el) return;
+    if(S.user && S.user.avatar_url){ el.innerHTML = `<img src="${esc(S.user.avatar_url)}" alt="${esc(name)}" style="width:100%;height:100%;object-fit:cover;border-radius:50%"/>`; }
+    else { el.textContent = initial; el.style.background=''; }
+  };
+  setAvatar($('#sidebarAvatar')); setAvatar($('#topbarAvatar'));
+}
+
+window.addEventListener('hashchange', () => {
+  const h = location.hash.replace(/^#\//,'');
+  if(!h || h==='home') return;
+  const parts = h.split('/');
+  const route = parts[0];
+  const param = parts[1] ? decodeURIComponent(parts[1]) : null;
+  if(ROUTES[route]) { S.route = route; S.routeParam = param; if($('#appShell').classList.contains('active')) renderRoute(); }
+});
+
+function openMoreMenu() {
+  const adminItems = isAdmin() ? `
+    <button class="btn btn-secondary btn-block" onclick="closeModal();BW.navigate('quizzes')">Kuis</button>
+    <button class="btn btn-secondary btn-block" onclick="closeModal();BW.navigate('users')">Pengguna</button>
+    <button class="btn btn-secondary btn-block" onclick="closeModal();BW.navigate('settings')">Pengaturan</button>
+  ` : `<button class="btn btn-secondary btn-block" onclick="closeModal();BW.navigate('quizzes')">Kuis</button>`;
+  openModal({
+    title:'Menu', sub:'Navigasi cepat', size:'sm',
+    body:`<div style="display:grid;gap:10px">
+      <button class="btn btn-secondary btn-block" onclick="closeModal();BW.navigate('profile')">Profil Saya</button>
+      ${adminItems}
+      <button class="btn btn-danger btn-block" onclick="closeModal();BW.logout()">Keluar</button>
+    </div>`,
+    footer:''
+  });
+}
+
+/* ---------- Render helpers ---------- */
+function bookCoverHTML(book, cls='') {
+  const url = book.cover_url || '';
+  const title = esc(book.title||'Buku');
+  if(url) return `<img src="${esc(url)}" alt="${title}" class="${cls}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="book-cover-placeholder ${cls}" style="display:none">${title}</div>`;
+  const colors = [['#E0E7FF','#C7D2FE','#4338CA'],['#D1FAE5','#A7F3D0','#065F46'],['#FEF3C7','#FDE68A','#92400E'],['#DBEAFE','#BFDBFE','#1E40AF'],['#FCE7F3','#FBCFE8','#9D174D']];
+  const c = colors[(String(book.title||'').length) % colors.length];
+  return `<div class="book-cover-placeholder ${cls}" style="background:linear-gradient(135deg,${c[0]},${c[1]});color:${c[2]}">${title}</div>`;
+}
+function avatarHTML(user, size='sm') {
+  const name = esc((user&&user.name)||'U');
+  const initial = name.trim().charAt(0).toUpperCase();
+  const url = user && user.avatar_url;
+  if(url) return `<img src="${esc(url)}" alt="${name}" class="avatar ${size}" onerror="this.outerHTML='<div class=\\'avatar ${size}\\'>${initial}</div>'"/>`;
+  return `<div class="avatar ${size}">${initial}</div>`;
+}
+function emptyState(icon, title, desc, actionHTML='') {
+  return `<div class="empty-state"><div class="empty-icon">${icon}</div><h3>${esc(title)}</h3><p>${esc(desc)}</p>${actionHTML}</div>`;
+}
+const ICON_BOOK = '<svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>';
+const ICON_LOG = '<svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>';
+const ICON_CHAT = '<svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+
+/* ---------- Dashboard ---------- */
+function renderDashboard(el) {
+  const logs = S.myLogs || [];
+  const pages = logs.reduce((s,l)=>s+Number(l.pages_read||0),0);
+  const mins = logs.reduce((s,l)=>s+Number(l.duration_mins||0),0);
+  const streak = calcStreak(logs);
+  const recent = logs.slice(0,5);
+  const activeBooks = S.books.filter(b=>b.status==='active').slice(0,4);
+  el.innerHTML = `
+    <div class="page-header">
+      <div><h2>Halo, ${esc((S.user&&S.user.name)||'Pembaca')} 👋</h2><p>Terus bangun kebiasaan membaca Anda hari ini.</p></div>
+      <div class="page-header-actions">
+        <button class="btn btn-primary" onclick="BW.openLogForm()"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Catat Bacaan</button>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-label">📚 Buku Aktif</div><div class="stat-val">${S.books.filter(b=>b.status==='active').length}</div></div>
+      <div class="stat-card"><div class="stat-label">📖 Halaman Dibaca</div><div class="stat-val">${pages}</div></div>
+      <div class="stat-card"><div class="stat-label">🔥 Streak</div><div class="stat-val">${streak} <span style="font-size:16px;font-weight:600;color:var(--text-muted)">hari</span></div></div>
+      <div class="stat-card"><div class="stat-label">⏱ Menit Baca</div><div class="stat-val">${mins}</div></div>
+    </div>
+    <div class="grid-2" style="gap:24px">
+      <div class="panel">
+        <div class="panel-header"><h3 class="panel-title">Jurnal Terbaru</h3><button class="btn btn-ghost btn-sm" onclick="BW.navigate('logs')">Lihat semua</button></div>
+        ${recent.length ? recent.map(l=>`
+          <div class="list-item">
+            <div class="avatar sm" style="background:var(--primary-soft);color:var(--primary)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <div class="list-item-body">
+              <div class="list-item-title">${esc(l.book_title||'Buku')}</div>
+              <div class="list-item-meta">${l.pages_read||0} halaman • ${l.duration_mins||0} menit • ${fmtDate(l.created_at)}</div>
+              ${l.reflection ? `<div style="font-size:14px;color:var(--text-muted);margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${esc(l.reflection)}</div>`:''}
+            </div>
+          </div>`).join('') : emptyState(ICON_LOG,'Belum ada jurnal','Mulai catat bacaan pertama Anda untuk membangun kebiasaan.',`<button class="btn btn-primary btn-sm" onclick="BW.openLogForm()">Catat Bacaan</button>`)}
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h3 class="panel-title">Buku Aktif</h3><button class="btn btn-ghost btn-sm" onclick="BW.navigate('books')">Lihat semua</button></div>
+        ${activeBooks.length ? activeBooks.map(b=>`
+          <div class="list-item" style="cursor:pointer" onclick="BW.navigate('bookDetail','${esc(b.id)}')">
+            <div style="width:52px;height:70px;border-radius:8px;overflow:hidden;background:var(--bg-soft);flex-shrink:0">${bookCoverHTML(b)}</div>
+            <div class="list-item-body">
+              <div class="list-item-title">${esc(b.title)}</div>
+              <div class="list-item-meta">${esc(b.author||'-')} • ${esc(b.category||'Umum')}</div>
+              <div style="font-size:13px;color:var(--text-light);margin-top:4px">${Number(b.total_pages||0)} halaman</div>
+            </div>
+            <span class="badge badge-primary">${esc(b.status)}</span>
+          </div>`).join('') : emptyState(ICON_BOOK,'Belum ada buku','Buku aktif akan tampil di sini.', isAdmin()?`<button class="btn btn-primary btn-sm" onclick="BW.openBookForm()">Tambah Buku</button>`:'')}
+      </div>
+    </div>`;
+}
+function calcStreak(logs) {
+  const days = [...new Set(logs.map(l=>String(l.created_at||'').slice(0,10)).filter(Boolean))].sort().reverse();
+  if(!days.length) return 0;
+  const today = new Date(); const fmt=d=>d.toISOString().slice(0,10);
+  const t=fmt(today), y=fmt(new Date(today.getTime()-86400000));
+  if(!days.includes(t) && !days.includes(y)) return 0;
+  let count=0, ptr=new Date(days.includes(t)?today:y);
+  while(days.includes(fmt(ptr))){ count++; ptr=new Date(ptr.getTime()-86400000); }
+  return count;
+}
+
+/* ---------- Books ---------- */
+function renderBooks(el) {
+  const q = ($('#bookSearchInput')?.value || S._bookQuery || '').toLowerCase();
+  const statusFilter = S._bookStatus || 'all';
+  let books = S.books.slice();
+  if(statusFilter!=='all') books = books.filter(b=>b.status===statusFilter);
+  if(q) books = books.filter(b => (b.title+' '+b.author+' '+b.category).toLowerCase().includes(q));
+  el.innerHTML = `
+    <div class="page-header">
+      <div><h2>Katalog Buku</h2><p>Temukan dan kelola koleksi bacaan kelas Anda.</p></div>
+      <div class="page-header-actions">
+        ${isAdmin()?`<button class="btn btn-primary" onclick="BW.openBookForm()"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Tambah Buku</button>`:''}
+      </div>
+    </div>
+    <div class="panel" style="margin-bottom:24px">
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="input-icon-wrap" style="flex:1;min-width:220px"><svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input class="input" id="bookSearchInput" placeholder="Cari judul, penulis, kategori..." value="${esc(S._bookQuery||'')}" oninput="S._bookQuery=this.value;BW.renderBooks(document.getElementById('appContent'))"/></div>
+        <select class="select" style="width:auto;min-width:180px" onchange="S._bookStatus=this.value;BW.renderBooks(document.getElementById('appContent'))">
+          <option value="all" ${statusFilter==='all'?'selected':''}>Semua Status</option>
+          <option value="active" ${statusFilter==='active'?'selected':''}>Aktif</option>
+          <option value="upcoming" ${statusFilter==='upcoming'?'selected':''}>Mendatang</option>
+          <option value="archived" ${statusFilter==='archived'?'selected':''}>Arsip</option>
+        </select>
+      </div>
+    </div>
+    ${books.length ? `<div class="grid-3">${books.map(b=>bookCardHTML(b)).join('')}</div>` : emptyState(ICON_BOOK,'Buku tidak ditemukan','Coba ubah pencarian atau tambahkan buku baru.', isAdmin()?`<button class="btn btn-primary btn-sm" onclick="BW.openBookForm()">Tambah Buku</button>`:'')}
+  `;
+}
+function bookCardHTML(b) {
+  const statusBadge = b.status==='active'?'<span class="badge badge-mint">Aktif</span>':b.status==='upcoming'?'<span class="badge badge-amber">Mendatang</span>':'<span class="badge badge-slate">Arsip</span>';
+  const chaptersCount = S.chapters.filter(c=>c.book_id===b.id).length;
+  return `<div class="book-card">
+    <div class="book-cover" style="cursor:pointer" onclick="BW.navigate('bookDetail','${esc(b.id)}')">${bookCoverHTML(b)}<span class="book-badge">${statusBadge}</span></div>
+    <div class="book-body">
+      <div class="book-cat">${esc(b.category||'Umum')}</div>
+      <h3 class="book-title" style="cursor:pointer" onclick="BW.navigate('bookDetail','${esc(b.id)}')">${esc(b.title)}</h3>
+      <p class="book-author">${esc(b.author||'-')}</p>
+      <div class="book-meta"><span>${Number(b.total_pages||0)} hal</span><span>${chaptersCount} bab</span></div>
+    </div>
+    <div class="book-actions">
+      <button class="btn btn-secondary btn-sm" onclick="BW.navigate('bookDetail','${esc(b.id)}')">Detail</button>
+      ${isAdmin()?`<button class="btn btn-ghost btn-sm" onclick="BW.openBookForm('${esc(b.id)}')">Edit</button><button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteBook('${esc(b.id)}')">Hapus</button>`:''}
+    </div>
+  </div>`;
+}
+
+function openBookForm(id=null) {
+  if(!isAdmin()){ toast('Hanya admin yang dapat mengelola buku.','warn'); return; }
+  const b = id ? S.books.find(x=>x.id===id) : null;
+  openModal({
+    title: b ? 'Edit Buku' : 'Tambah Buku Baru',
+    sub: b ? 'Perbarui informasi buku dan cover.' : 'Lengkapi informasi buku untuk katalog kelas.',
+    size:'lg',
+    body: `
+      <form id="bookForm" class="form-grid">
+        <div class="field full"><label>Cover Buku</label>
+          <div class="img-upload" id="bookCoverUpload">
+            ${b&&b.cover_url?`<img data-preview src="${esc(b.cover_url)}" class="img-upload-preview" style="display:block"/>`:`<img data-preview class="img-upload-preview" style="display:none"/>`}
+            <div data-placeholder style="${b&&b.cover_url?'display:none':''};color:var(--text-muted);font-size:14px;margin-bottom:8px">Unggah cover buku (JPG, PNG, WEBP, GIF, maks 4MB)</div>
+            <div class="img-upload-actions">
+              <label class="btn btn-secondary btn-sm" style="cursor:pointer"><input type="file" accept="image/*"/>Pilih Gambar</label>
+              <button type="button" class="btn btn-ghost btn-sm" data-remove>Hapus Gambar</button>
+            </div>
+            <div class="field-hint" data-status></div>
+          </div>
+        </div>
+        <div class="field"><label>Judul Buku *</label><input class="input" name="title" required maxlength="200" value="${esc(b?b.title:'')}" placeholder="Contoh: Atomic Habits"/></div>
+        <div class="field"><label>Penulis *</label><input class="input" name="author" required maxlength="120" value="${esc(b?b.author:'')}" placeholder="Nama penulis"/></div>
+        <div class="field"><label>Kategori</label><input class="input" name="category" maxlength="80" value="${esc(b?b.category:'')}" placeholder="Pengembangan Diri, Fiksi, dll"/></div>
+        <div class="field"><label>Total Halaman *</label><input class="input" name="total_pages" type="number" min="1" required value="${esc(b?b.total_pages:0)}"/></div>
+        <div class="field"><label>Status</label><select class="select" name="status"><option value="active" ${b&&b.status==='active'?'selected':''}>Aktif</option><option value="upcoming" ${b&&b.status==='upcoming'?'selected':''}>Mendatang</option><option value="archived" ${b&&b.status==='archived'?'selected':''}>Arsip</option></select></div>
+        <div class="field"><label>Unggulan</label><select class="select" name="featured"><option value="false" ${!b||!b.featured?'selected':''}>Tidak</option><option value="true" ${b&&b.featured?'selected':''}>Ya, tampilkan di landing</option></select></div>
+        <div class="field full"><label>Sinopsis</label><textarea class="textarea" name="synopsis" maxlength="5000" placeholder="Deskripsi singkat buku...">${esc(b?b.synopsis:'')}</textarea></div>
+      </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveBookBtn">${b?'Simpan Perubahan':'Tambah Buku'}</button>`
+  });
+  bindImageUpload('bookCoverUpload', {currentUrl:b?b.cover_url:''});
+  $('#saveBookBtn').onclick = async () => {
+    const form = $('#bookForm'); if(!form.reportValidity()) return;
+    const btn = $('#saveBookBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try {
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.id = b ? b.id : '';
+      payload.featured = payload.featured === 'true';
+      const upWrap = document.getElementById('bookCoverUpload');
+      const imgPayload = upWrap._getPayload();
+      const imgRemoved = upWrap._isRemoved();
+      if(imgPayload) { payload.cover_image_base64 = imgPayload.image_base64; payload.cover_filename = imgPayload.filename; payload.cover_mime_type = imgPayload.mime_type; }
+      if(imgRemoved) payload.remove_cover = true;
+      const res = await api('saveBook', payload);
+      await refreshData(true);
+      closeModal();
+      toast(res._message || (b?'Buku diperbarui.':'Buku ditambahkan.'));
+      if(S.route==='bookDetail' && b) navigate('bookDetail', b.id); else if(S.route==='books') renderBooks($('#appContent'));
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+function deleteBook(id) {
+  const b = S.books.find(x=>x.id===id); if(!b) return;
+  confirmDialog({ title:'Hapus Buku', message:`Hapus buku "${b.title}" secara permanen? Semua bab, log, diskusi, dan kuis terkait juga akan dihapus.`, confirmText:'Ya, Hapus', onConfirm: async ()=>{
+    await api('deleteBook', {id});
+    await refreshData(true);
+    toast('Buku berhasil dihapus.');
+    if(S.route==='bookDetail') navigate('books'); else renderBooks($('#appContent'));
+  }});
+}
+
+/* ---------- Book Detail & Chapters ---------- */
+function renderBookDetail(el, bookId) {
+  const b = S.books.find(x=>x.id===bookId);
+  if(!b){ el.innerHTML = emptyState(ICON_BOOK,'Buku tidak ditemukan','Buku mungkin telah dihapus.',`<button class="btn btn-primary btn-sm" onclick="BW.navigate('books')">Kembali</button>`); return; }
+  const chapters = S.chapters.filter(c=>c.book_id===bookId).sort((a,b)=>Number(a.chapter_number)-Number(b.chapter_number));
+  const bookLogs = (isAdmin()?S.allLogs:S.myLogs).filter(l=>l.book_id===bookId).slice(0,5);
+  const bookDiscussions = S.discussions.filter(d=>d.book_id===bookId && !d.parent_id).slice(0,5);
+  const bookQuizzes = S.quizzes.filter(q=>q.book_id===bookId);
+  const progressLogs = S.myLogs.filter(l=>l.book_id===bookId);
+  const maxPage = progressLogs.reduce((m,l)=>Math.max(m,Number(l.end_page||0)),0);
+  const pct = b.total_pages ? Math.min(100, Math.round((maxPage/Number(b.total_pages))*100)) : 0;
+  el.innerHTML = `
+    <div style="margin-bottom:16px"><button class="btn btn-ghost btn-sm" onclick="BW.navigate('books')"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Kembali ke Katalog</button></div>
+    <div class="panel" style="margin-bottom:24px">
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start" class="book-detail-grid">
+        <div style="border-radius:16px;overflow:hidden;background:var(--bg-soft);aspect-ratio:3/4">${bookCoverHTML(b)}</div>
+        <div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><span class="badge badge-primary">${esc(b.category||'Umum')}</span><span class="badge ${b.status==='active'?'badge-mint':b.status==='upcoming'?'badge-amber':'badge-slate'}">${esc(b.status)}</span>${b.featured?'<span class="badge badge-amber">Unggulan</span>':''}</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(26px,3vw,36px);font-weight:800;color:var(--text);margin:0 0 8px;line-height:1.2">${esc(b.title)}</h2>
+          <p style="font-size:16px;color:var(--text-muted);margin:0 0 16px">oleh <strong style="color:var(--text-body)">${esc(b.author||'-')}</strong> • ${Number(b.total_pages||0)} halaman • ${chapters.length} bab</p>
+          <p style="font-size:16px;color:var(--text-body);line-height:1.75;margin:0 0 20px">${esc(b.synopsis||'Belum ada sinopsis.')}</p>
+          <div style="margin-bottom:20px"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px"><span>Progres baca Anda</span><span>${pct}% (${maxPage}/${Number(b.total_pages||0)})</span></div><div class="progress"><span style="width:${pct}%"></span></div></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="BW.openLogForm('${esc(b.id)}')">Catat Bacaan</button>
+            ${isAdmin()?`<button class="btn btn-secondary" onclick="BW.openBookForm('${esc(b.id)}')">Edit Buku</button><button class="btn btn-secondary" onclick="BW.openChapterForm('${esc(b.id)}')">+ Bab</button>`:''}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-2" style="gap:24px;align-items:start">
+      <div class="panel">
+        <div class="panel-header"><h3 class="panel-title">Daftar Bab</h3>${isAdmin()?`<button class="btn btn-secondary btn-sm" onclick="BW.openChapterForm('${esc(b.id)}')">+ Tambah Bab</button>`:''}</div>
+        ${chapters.length?chapters.map(c=>`
+          <div class="list-item">
+            <div style="width:40px;height:40px;border-radius:10px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:800;font-size:14px;flex-shrink:0">${c.chapter_number}</div>
+            <div class="list-item-body"><div class="list-item-title">${esc(c.title)}</div><div class="list-item-meta">${c.read_time_mins?c.read_time_mins+' menit baca • ':''}${fmtDate(c.created_at)}</div></div>
+            <div class="list-item-actions">
+              <button class="btn btn-ghost btn-sm" onclick="BW.openChapterRead('${esc(c.id)}')">Baca</button>
+              ${isAdmin()?`<button class="btn btn-ghost btn-sm" onclick="BW.openChapterForm('${esc(b.id)}','${esc(c.id)}')">Edit</button><button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteChapter('${esc(c.id)}','${esc(b.id)}')">Hapus</button>`:''}
+            </div>
+          </div>`).join(''):emptyState(ICON_BOOK,'Belum ada bab','Tambahkan bab untuk memandu pembaca.', isAdmin()?`<button class="btn btn-primary btn-sm" onclick="BW.openChapterForm('${esc(b.id)}')">Tambah Bab</button>`:'')}
+      </div>
+      <div style="display:grid;gap:24px">
+        <div class="panel">
+          <div class="panel-header"><h3 class="panel-title">Diskusi Buku</h3><button class="btn btn-ghost btn-sm" onclick="BW.navigate('discussions')">Semua</button></div>
+          ${bookDiscussions.length?bookDiscussions.map(d=>`<div class="list-item"><div class="list-item-body"><div class="list-item-title">${esc(d.title||'Diskusi')}</div><div class="list-item-meta">${esc(d.user_name||'Pembaca')} • ${fmtDate(d.created_at)}</div></div></div>`).join(''):'<p class="text-muted text-sm">Belum ada diskusi untuk buku ini.</p>'}
+          <div style="margin-top:12px"><button class="btn btn-secondary btn-sm" onclick="BW.openDiscussionForm('${esc(b.id)}')">Mulai Diskusi</button></div>
+        </div>
+        <div class="panel">
+          <div class="panel-header"><h3 class="panel-title">Kuis</h3>${isAdmin()?`<button class="btn btn-ghost btn-sm" onclick="BW.openQuizForm(null,'${esc(b.id)}')">+ Kuis</button>`:''}</div>
+          ${bookQuizzes.length?bookQuizzes.map(q=>`<div class="list-item"><div class="list-item-body"><div class="list-item-title">${esc(q.title)}</div><div class="list-item-meta">${(q.questions||[]).length} soal</div></div><div class="list-item-actions"><button class="btn btn-secondary btn-sm" onclick="BW.takeQuiz('${esc(q.id)}')">Kerjakan</button>${isAdmin()?`<button class="btn btn-ghost btn-sm" onclick="BW.openQuizForm('${esc(q.id)}')">Edit</button>`:''}</div></div>`).join(''):'<p class="text-muted text-sm">Belum ada kuis untuk buku ini.</p>'}
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:900px){.book-detail-grid{grid-template-columns:1fr!important}.book-detail-grid>div:first-child{max-width:260px}}</style>`;
+}
+
+function openChapterRead(chapterId) {
+  const c = S.chapters.find(x=>x.id===chapterId); if(!c) return;
+  const b = S.books.find(x=>x.id===c.book_id);
+  openModal({
+    title: `Bab ${c.chapter_number}: ${c.title}`,
+    sub: b ? b.title : '',
+    size:'lg',
+    body: `<div style="font-size:16px;line-height:1.85;color:var(--text-body)">${c.content_html || '<p class="text-muted">Belum ada konten.</p>'}</div>${c.discussion_prompt?`<div style="margin-top:24px;padding:18px;background:var(--primary-soft);border-radius:14px"><strong style="color:var(--primary);display:block;margin-bottom:6px">Pertanyaan Diskusi</strong><span style="color:var(--text-body)">${esc(c.discussion_prompt)}</span></div>`:''}`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Tutup</button>`
+  });
+}
+
+function openChapterForm(bookId, chapterId=null) {
+  if(!isAdmin()) return;
+  const c = chapterId ? S.chapters.find(x=>x.id===chapterId) : null;
+  const bookChapters = S.chapters.filter(x=>x.book_id===bookId);
+  const nextNum = c ? c.chapter_number : (bookChapters.reduce((m,x)=>Math.max(m,Number(x.chapter_number||0)),0)+1);
+  openModal({
+    title: c?'Edit Bab':'Tambah Bab',
+    sub:'Susun materi bacaan per bab.',
+    size:'lg',
+    body:`<form id="chapterForm" class="form-grid">
+      <div class="field"><label>Nomor Bab *</label><input class="input" name="chapter_number" type="number" min="1" required value="${esc(nextNum)}"/></div>
+      <div class="field"><label>Estimasi Baca (menit)</label><input class="input" name="read_time_mins" type="number" min="0" value="${esc(c?c.read_time_mins:10)}"/></div>
+      <div class="field full"><label>Judul Bab *</label><input class="input" name="title" required maxlength="200" value="${esc(c?c.title:'')}"/></div>
+      <div class="field full"><label>Konten (HTML sederhana diperbolehkan)</label><textarea class="textarea" name="content_html" style="min-height:220px" placeholder="Tulis materi bab di sini...">${esc(c?c.content_html:'')}</textarea></div>
+      <div class="field full"><label>Pertanyaan Diskusi</label><textarea class="textarea" name="discussion_prompt" style="min-height:90px" placeholder="Pertanyaan pemantik diskusi...">${esc(c?c.discussion_prompt:'')}</textarea></div>
+    </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveChapterBtn">Simpan Bab</button>`
+  });
+  $('#saveChapterBtn').onclick = async () => {
+    const form=$('#chapterForm'); if(!form.reportValidity()) return;
+    const btn=$('#saveChapterBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try {
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.id = c?c.id:''; payload.book_id = bookId;
+      await api('saveChapter', payload);
+      await refreshData(true); closeModal(); toast(c?'Bab diperbarui.':'Bab ditambahkan.');
+      navigate('bookDetail', bookId);
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+function deleteChapter(id, bookId) {
+  const c=S.chapters.find(x=>x.id===id); if(!c) return;
+  confirmDialog({title:'Hapus Bab', message:`Hapus bab "${c.title}"?`, confirmText:'Hapus Bab', onConfirm: async ()=>{
+    await api('deleteChapter',{id}); await refreshData(true); toast('Bab dihapus.'); navigate('bookDetail',bookId);
+  }});
+}
+
+/* ---------- Reading Logs ---------- */
+function renderLogs(el) {
+  const logs = (S.myLogs||[]).slice().sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)));
+  const pages = logs.reduce((s,l)=>s+Number(l.pages_read||0),0);
+  el.innerHTML = `
+    <div class="page-header"><div><h2>Jurnal Baca</h2><p>Catat progres, kutipan, dan refleksi bacaan Anda.</p></div><div class="page-header-actions"><button class="btn btn-primary" onclick="BW.openLogForm()"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Catat Bacaan</button></div></div>
+    <div class="stat-grid" style="grid-template-columns:repeat(3,1fr)"><div class="stat-card"><div class="stat-label">Total Log</div><div class="stat-val">${logs.length}</div></div><div class="stat-card"><div class="stat-label">Halaman Dibaca</div><div class="stat-val">${pages}</div></div><div class="stat-card"><div class="stat-label">Streak</div><div class="stat-val">${calcStreak(logs)}</div></div></div>
+    <div class="panel">
+      <div class="panel-header"><h3 class="panel-title">Riwayat Jurnal</h3></div>
+      ${logs.length?`<div class="table-wrap"><table class="table"><thead><tr><th>Tanggal</th><th>Buku</th><th>Halaman</th><th>Durasi</th><th>Refleksi</th><th>Aksi</th></tr></thead><tbody>${logs.map(l=>`<tr>
+        <td>${fmtDate(l.created_at)}</td>
+        <td><strong style="color:var(--text)">${esc(l.book_title||'-')}</strong></td>
+        <td>${Number(l.start_page||0)}-${Number(l.end_page||0)} <span class="text-muted">(${Number(l.pages_read||0)})</span></td>
+        <td>${Number(l.duration_mins||0)} mnt</td>
+        <td style="max-width:260px"><div style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${esc(l.reflection||l.quote||'-')}</div></td>
+        <td><div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="BW.openLogForm(null,'${esc(l.id)}')">Edit</button><button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteLog('${esc(l.id)}')">Hapus</button></div></td>
+      </tr>`).join('')}</tbody></table></div>`:emptyState(ICON_LOG,'Belum ada jurnal baca','Catat bacaan pertama Anda untuk mulai membangun kebiasaan.',`<button class="btn btn-primary btn-sm" onclick="BW.openLogForm()">Catat Bacaan</button>`)}
+    </div>`;
+}
+function openLogForm(bookId=null, logId=null) {
+  const l = logId ? S.myLogs.find(x=>x.id===logId) : null;
+  const selectedBook = bookId || (l?l.book_id:'');
+  openModal({
+    title: l?'Edit Jurnal Baca':'Catat Bacaan',
+    sub:'Rekam progres membaca Anda dengan detail.',
+    size:'lg',
+    body:`<form id="logForm" class="form-grid">
+      <div class="field full"><label>Buku *</label><select class="select" name="book_id" required><option value="">Pilih buku...</option>${S.books.filter(b=>b.status!=='archived'||b.id===selectedBook).map(b=>`<option value="${esc(b.id)}" ${b.id===selectedBook?'selected':''}>${esc(b.title)} — ${esc(b.author||'')}</option>`).join('')}</select></div>
+      <div class="field"><label>Halaman Mulai</label><input class="input" name="start_page" type="number" min="0" value="${esc(l?l.start_page:0)}"/></div>
+      <div class="field"><label>Halaman Selesai *</label><input class="input" name="end_page" type="number" min="0" required value="${esc(l?l.end_page:0)}"/></div>
+      <div class="field"><label>Halaman Dibaca</label><input class="input" name="pages_read" type="number" min="0" value="${esc(l?l.pages_read:0)}" placeholder="Otomatis jika kosong"/></div>
+      <div class="field"><label>Durasi (menit)</label><input class="input" name="duration_mins" type="number" min="0" value="${esc(l?l.duration_mins:0)}"/></div>
+      <div class="field full"><label>Kutipan Favorit</label><textarea class="textarea" name="quote" style="min-height:80px" placeholder="Kutipan yang berkesan...">${esc(l?l.quote:'')}</textarea></div>
+      <div class="field full"><label>Refleksi / Insight</label><textarea class="textarea" name="reflection" placeholder="Apa yang Anda pelajari dari bacaan ini?">${esc(l?l.reflection:'')}</textarea></div>
+      <div class="field full"><label>Visibilitas</label><select class="select" name="is_public"><option value="true" ${!l||l.is_public?'selected':''}>Publik (bisa dilihat komunitas)</option><option value="false" ${l&&!l.is_public?'selected':''}>Privat</option></select></div>
+    </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveLogBtn">${l?'Simpan Perubahan':'Simpan Jurnal'}</button>`
+  });
+  $('#saveLogBtn').onclick = async () => {
+    const form=$('#logForm'); if(!form.reportValidity()) return;
+    const btn=$('#saveLogBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try {
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.id = l?l.id:''; payload.is_public = payload.is_public==='true';
+      await api('saveReadingLog', payload);
+      await refreshData(true); closeModal(); toast(l?'Jurnal diperbarui.':'Jurnal berhasil disimpan.');
+      renderRoute();
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+function deleteLog(id) {
+  const l=S.myLogs.find(x=>x.id===id); if(!l) return;
+  confirmDialog({title:'Hapus Jurnal', message:`Hapus jurnal baca untuk "${l.book_title||'buku ini'}"?`, confirmText:'Hapus Jurnal', onConfirm: async ()=>{
+    await api('deleteReadingLog',{id}); await refreshData(true); toast('Jurnal dihapus.'); renderRoute();
+  }});
+}
+
+/* ---------- Discussions ---------- */
+function renderDiscussions(el) {
+  const topics = S.discussions.filter(d=>!d.parent_id).sort((a,b)=> (b.is_pinned?1:0)-(a.is_pinned?1:0) || String(b.created_at).localeCompare(String(a.created_at)));
+  el.innerHTML = `
+    <div class="page-header"><div><h2>Diskusi</h2><p>Berbagi insight, tanya jawab, dan diskusi buku bersama komunitas.</p></div><div class="page-header-actions"><button class="btn btn-primary" onclick="BW.openDiscussionForm()">Topik Baru</button></div></div>
+    <div class="panel">
+      ${topics.length?topics.map(d=>discussionItemHTML(d)).join(''):emptyState(ICON_CHAT,'Belum ada diskusi','Mulai topik diskusi pertama untuk komunitas Anda.',`<button class="btn btn-primary btn-sm" onclick="BW.openDiscussionForm()">Buat Topik</button>`)}
+    </div>`;
+}
+function discussionItemHTML(d) {
+  const replies = S.discussions.filter(x=>x.parent_id===d.id).sort((a,b)=>String(a.created_at).localeCompare(String(b.created_at)));
+  const liked = (d.likes||[]).includes(S.user?.id);
+  const book = S.books.find(b=>b.id===d.book_id);
+  return `<div style="padding:20px 0;border-bottom:1px solid var(--border-soft)">
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      ${avatarHTML({name:d.user_name,avatar_url:d.user_avatar},'sm')}
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:4px">
+          ${d.is_pinned?'<span class="badge badge-amber">Pinned</span>':''}
+          ${book?`<span class="badge badge-slate">${esc(book.title)}</span>`:''}
+        </div>
+        <div style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px">${esc(d.title||'Diskusi')}</div>
+        <div style="font-size:14px;color:var(--text-muted);margin-bottom:8px">${esc(d.user_name||'Pembaca')} • ${fmtDateTime(d.created_at)}</div>
+        <div style="font-size:16px;color:var(--text-body);line-height:1.7;white-space:pre-wrap">${esc(d.content||'')}</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+          <button class="btn btn-ghost btn-sm" onclick="BW.toggleLike('${esc(d.id)}')">${liked?'❤️':'🤍'} ${Number(d.likes_count|| (d.likes||[]).length||0)}</button>
+          <button class="btn btn-ghost btn-sm" onclick="BW.openReplyForm('${esc(d.id)}')">Balas (${replies.length})</button>
+          ${isAdmin()?`<button class="btn btn-ghost btn-sm" onclick="BW.togglePin('${esc(d.id)}')">${d.is_pinned?'Lepas Pin':'Pin'}</button>`:''}
+          ${(isAdmin()||S.user?.id===d.user_id)?`<button class="btn btn-ghost btn-sm" onclick="BW.openDiscussionForm(null,'${esc(d.id)}')">Edit</button><button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteDiscussion('${esc(d.id)}')">Hapus</button>`:''}
+        </div>
+        ${replies.length?`<div style="margin-top:14px;padding-left:12px;border-left:2px solid var(--border-soft);display:grid;gap:12px">${replies.map(r=>`<div style="background:var(--bg);border-radius:12px;padding:14px"><div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px">${esc(r.user_name||'Pembaca')} <span style="font-weight:500;color:var(--text-light)">• ${fmtDateTime(r.created_at)}</span></div><div style="font-size:15px;color:var(--text-body);white-space:pre-wrap">${esc(r.content||'')}</div>${(isAdmin()||S.user?.id===r.user_id)?`<div style="margin-top:8px"><button class="btn btn-ghost btn-sm" style="color:var(--rose);min-height:36px;padding:0 10px" onclick="BW.deleteDiscussion('${esc(r.id)}')">Hapus</button></div>`:''}</div>`).join('')}</div>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+function openDiscussionForm(bookId=null, editId=null) {
+  const d = editId ? S.discussions.find(x=>x.id===editId) : null;
+  openModal({
+    title: d?'Edit Diskusi':'Topik Diskusi Baru',
+    sub:'Bagikan pertanyaan atau insight bacaan Anda.',
+    body:`<form id="discForm" class="form-grid">
+      <div class="field full"><label>Buku (opsional)</label><select class="select" name="book_id"><option value="">Umum / Semua Buku</option>${S.books.map(b=>`<option value="${esc(b.id)}" ${(d?d.book_id:bookId)===b.id?'selected':''}>${esc(b.title)}</option>`).join('')}</select></div>
+      ${(!d||!d.parent_id)?`<div class="field full"><label>Judul Topik *</label><input class="input" name="title" required maxlength="200" value="${esc(d?d.title:'')}"/></div>`:''}
+      <div class="field full"><label>Isi Diskusi *</label><textarea class="textarea" name="content" required maxlength="5000" style="min-height:140px">${esc(d?d.content:'')}</textarea></div>
+    </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveDiscBtn">Simpan</button>`
+  });
+  $('#saveDiscBtn').onclick = async () => {
+    const form=$('#discForm'); if(!form.reportValidity()) return;
+    const btn=$('#saveDiscBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try {
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.id = d?d.id:''; payload.parent_id = d?d.parent_id:'';
+      await api('saveDiscussion', payload); await refreshData(true); closeModal(); toast(d?'Diskusi diperbarui.':'Topik dibuat.'); renderRoute();
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+function openReplyForm(parentId) {
+  openModal({ title:'Balas Diskusi', sub:'Tulis balasan Anda.', size:'sm', body:`<form id="replyForm"><div class="field"><label>Balasan *</label><textarea class="textarea" name="content" required maxlength="2000" style="min-height:120px"></textarea></div></form>`, footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="sendReplyBtn">Kirim</button>` });
+  $('#sendReplyBtn').onclick = async () => {
+    const form=$('#replyForm'); if(!form.reportValidity()) return;
+    const btn=$('#sendReplyBtn'); setBtnLoading(btn,true,'Mengirim...');
+    try { await api('saveDiscussion',{parent_id:parentId, content:form.content.value, book_id:(S.discussions.find(d=>d.id===parentId)||{}).book_id||''}); await refreshData(true); closeModal(); toast('Balasan terkirim.'); renderRoute(); }
+    catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+async function toggleLike(id){ try{ await api('toggleLikeDiscussion',{id}); await refreshData(true); renderRoute(); }catch(e){ toast(e.message,'error'); } }
+async function togglePin(id){ try{ await api('togglePinDiscussion',{id}); await refreshData(true); renderRoute(); }catch(e){ toast(e.message,'error'); } }
+function deleteDiscussion(id){ confirmDialog({title:'Hapus Diskusi', message:'Hapus diskusi ini? Balasan terkait juga akan dihapus jika ini topik utama.', confirmText:'Hapus', onConfirm: async ()=>{ await api('deleteDiscussion',{id}); await refreshData(true); toast('Diskusi dihapus.'); renderRoute(); }}); }
+
+/* ---------- Quizzes ---------- */
+function renderQuizzes(el) {
+  const quizzes = S.quizzes.slice().sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)));
+  el.innerHTML = `
+    <div class="page-header"><div><h2>Kuis Pemahaman</h2><p>Uji pemahaman bacaan dan lihat hasil Anda.</p></div><div class="page-header-actions">${isAdmin()?`<button class="btn btn-primary" onclick="BW.openQuizForm()">Buat Kuis</button>`:''}</div></div>
+    <div class="panel">
+      ${quizzes.length?`<div class="grid-2">${quizzes.map(q=>{
+        const book=S.books.find(b=>b.id===q.book_id);
+        const my=S.myQuizResults.filter(r=>r.quiz_id===q.id).sort((a,b)=>String(b.completed_at).localeCompare(String(a.completed_at)))[0];
+        return `<div class="card" style="padding:20px"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><span class="badge badge-primary">${esc(book?book.title:'Umum')}</span><span class="badge badge-slate">${(q.questions||[]).length} soal</span></div><h3 style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text);margin:0 0 8px">${esc(q.title)}</h3><p style="font-size:15px;color:var(--text-muted);margin:0 0 14px;line-height:1.6">${esc(q.description||'')}</p>${my?`<div style="font-size:14px;font-weight:700;color:var(--mint);margin-bottom:14px">Skor terakhir: ${my.score}/100</div>`:''}<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="BW.takeQuiz('${esc(q.id)}')">Kerjakan</button>${isAdmin()?`<button class="btn btn-secondary btn-sm" onclick="BW.openQuizForm('${esc(q.id)}')">Edit</button><button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteQuiz('${esc(q.id)}')">Hapus</button>`:''}</div></div>`;
+      }).join('')}</div>`:emptyState('<svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>','Belum ada kuis','Kuis akan membantu mengukur pemahaman bacaan.', isAdmin()?`<button class="btn btn-primary btn-sm" onclick="BW.openQuizForm()">Buat Kuis</button>`:'')}
+    </div>`;
+}
+function openQuizForm(id=null, bookId=null) {
+  if(!isAdmin()) return;
+  const q = id ? S.quizzes.find(x=>x.id===id) : null;
+  const questions = q ? (q.questions||[]) : [{question:'',options:['','','',''],correctIndex:0,explanation:''}];
+  openModal({
+    title: q?'Edit Kuis':'Buat Kuis',
+    sub:'Buat soal pilihan ganda untuk menguji pemahaman.',
+    size:'lg',
+    body:`<form id="quizForm">
+      <div class="form-grid">
+        <div class="field"><label>Buku *</label><select class="select" name="book_id" required><option value="">Pilih buku...</option>${S.books.map(b=>`<option value="${esc(b.id)}" ${(q?q.book_id:bookId)===b.id?'selected':''}>${esc(b.title)}</option>`).join('')}</select></div>
+        <div class="field"><label>Judul Kuis *</label><input class="input" name="title" required maxlength="200" value="${esc(q?q.title:'')}"/></div>
+        <div class="field full"><label>Deskripsi</label><textarea class="textarea" name="description" style="min-height:80px">${esc(q?q.description:'')}</textarea></div>
+      </div>
+      <div style="margin-top:8px;margin-bottom:12px;font-weight:800;color:var(--text);font-family:var(--font-display)">Soal</div>
+      <div id="quizQuestionsWrap">${questions.map((qq,i)=>quizQuestionHTML(qq,i)).join('')}</div>
+      <button type="button" class="btn btn-secondary btn-sm mt-16" onclick="BW.addQuizQuestion()">+ Tambah Soal</button>
+    </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveQuizBtn">Simpan Kuis</button>`
+  });
+  $('#saveQuizBtn').onclick = async () => {
+    const form=$('#quizForm'); if(!form.reportValidity()) return;
+    const btn=$('#saveQuizBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try {
+      const fd = new FormData(form);
+      const payload = { id:q?q.id:'', book_id:fd.get('book_id'), title:fd.get('title'), description:fd.get('description') };
+      const qEls = $$('#quizQuestionsWrap .quiz-q-item');
+      payload.questions = qEls.map((wrap,i)=>{
+        return {
+          question: wrap.querySelector('[name="question"]').value.trim(),
+          options: Array.from(wrap.querySelectorAll('[name="option"]')).map(o=>o.value.trim()).filter(Boolean),
+          correctIndex: Number(wrap.querySelector('[name="correctIndex"]').value||0),
+          explanation: wrap.querySelector('[name="explanation"]').value.trim()
+        };
+      }).filter(x=>x.question && x.options.length>=2);
+      if(!payload.questions.length) throw new Error('Minimal 1 soal dengan 2 opsi.');
+      await api('saveQuiz', payload); await refreshData(true); closeModal(); toast(q?'Kuis diperbarui.':'Kuis dibuat.'); renderRoute();
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+function quizQuestionHTML(q,i){
+  const opts = (q.options&&q.options.length?q.options:['','','','']);
+  while(opts.length<4) opts.push('');
+  return `<div class="quiz-q-item card" style="padding:16px;margin-bottom:12px">
+    <div style="display:flex;justify-content:space-between;gap:8px;margin-bottom:10px"><strong style="font-size:15px;color:var(--text)">Soal ${i+1}</strong><button type="button" class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="this.closest('.quiz-q-item').remove()">Hapus</button></div>
+    <div class="field"><label>Pertanyaan *</label><input class="input" name="question" required value="${esc(q.question||'')}"/></div>
+    <div class="form-grid">${opts.map((o,oi)=>`<div class="field"><label>Opsi ${String.fromCharCode(65+oi)}</label><input class="input" name="option" value="${esc(o||'')}" ${oi<2?'required':''}/></div>`).join('')}</div>
+    <div class="form-grid"><div class="field"><label>Jawaban Benar (index 0-3)</label><input class="input" name="correctIndex" type="number" min="0" max="5" value="${Number(q.correctIndex||0)}"/></div><div class="field"><label>Pembahasan</label><input class="input" name="explanation" value="${esc(q.explanation||'')}"/></div></div>
+  </div>`;
+}
+function addQuizQuestion(){ const w=$('#quizQuestionsWrap'); const i=w.querySelectorAll('.quiz-q-item').length; w.insertAdjacentHTML('beforeend', quizQuestionHTML({question:'',options:['','','',''],correctIndex:0,explanation:''},i)); }
+function deleteQuiz(id){ const q=S.quizzes.find(x=>x.id===id); if(!q) return; confirmDialog({title:'Hapus Kuis', message:`Hapus kuis "${q.title}" dan semua hasilnya?`, confirmText:'Hapus Kuis', onConfirm: async ()=>{ await api('deleteQuiz',{id}); await refreshData(true); toast('Kuis dihapus.'); renderRoute(); }}); }
+function takeQuiz(id){
+  const q=S.quizzes.find(x=>x.id===id); if(!q) return;
+  const qs=q.questions||[];
+  openModal({ title:q.title, sub:`${qs.length} soal • Pilih jawaban terbaik`, size:'lg',
+    body:`<form id="takeQuizForm">${qs.map((qq,i)=>`<div class="card" style="padding:18px;margin-bottom:14px"><div style="font-weight:700;color:var(--text);margin-bottom:12px;font-size:16px">${i+1}. ${esc(qq.question)}</div><div style="display:grid;gap:8px">${(qq.options||[]).map((opt,oi)=>`<label style="display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1.5px solid var(--border);border-radius:12px;cursor:pointer"><input type="radio" name="q_${i}" value="${oi}" required style="margin-top:3px"/><span style="font-size:15px;color:var(--text-body)">${esc(opt)}</span></label>`).join('')}</div></div>`).join('')}</form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="submitQuizBtn">Kirim Jawaban</button>`
+  });
+  $('#submitQuizBtn').onclick = async ()=>{
+    const form=$('#takeQuizForm'); if(!form.reportValidity()) return;
+    const btn=$('#submitQuizBtn'); setBtnLoading(btn,true,'Mengirim...');
+    try {
+      const answers = qs.map((_,i)=>{ const v=form.querySelector(`input[name="q_${i}"]:checked`); return v?Number(v.value):-1; });
+      const res = await api('submitQuizResult',{quiz_id:id, answers});
+      await refreshData(true); closeModal();
+      openModal({title:'Hasil Kuis', sub:q.title, size:'sm', body:`<div style="text-align:center;padding:12px 0"><div style="width:96px;height:96px;border-radius:50%;background:${res.score>=70?'var(--mint-soft)':'var(--amber-soft)'};color:${res.score>=70?'var(--mint)':'var(--amber)'};display:grid;place-items:center;font-family:var(--font-display);font-size:32px;font-weight:800;margin:0 auto 16px">${res.score}</div><p style="font-size:16px;color:var(--text-body);margin:0">Anda menjawab benar <strong>${res.correct}</strong> dari <strong>${res.total}</strong> soal.</p></div>`, footer:`<button class="btn btn-primary" onclick="BW.closeModal()">Tutup</button>`});
+    } catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+/* ---------- Users (Admin) ---------- */
+function renderUsers(el){
+  if(!isAdmin()){ el.innerHTML='<div class="panel">Akses ditolak.</div>'; return; }
+  const users=S.users||[];
+  el.innerHTML=`
+    <div class="page-header"><div><h2>Pengguna</h2><p>Kelola anggota, peran, dan status akun.</p></div><div class="page-header-actions"><button class="btn btn-primary" onclick="BW.openUserForm()">Tambah Pengguna</button></div></div>
+    <div class="panel"><div class="table-wrap"><table class="table"><thead><tr><th>Pengguna</th><th>Email</th><th>Peran</th><th>Status</th><th>Dibuat</th><th>Aksi</th></tr></thead><tbody>
+      ${users.map(u=>`<tr>
+        <td><div style="display:flex;gap:10px;align-items:center">${avatarHTML(u,'sm')}<div><div style="font-weight:700;color:var(--text)">${esc(u.name)}</div><div style="font-size:13px;color:var(--text-light)">${esc(u.id)}</div></div></div></td>
+        <td>${esc(u.email)}</td><td><span class="badge ${u.role==='admin'?'badge-primary':'badge-slate'}">${esc(u.role)}</span></td>
+        <td><span class="badge ${u.status==='active'?'badge-mint':'badge-rose'}">${esc(u.status)}</span></td><td>${fmtDate(u.created_at)}</td>
+        <td><div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="BW.openUserForm('${esc(u.id)}')">Edit</button>${S.user?.id!==u.id?`<button class="btn btn-ghost btn-sm" style="color:var(--rose)" onclick="BW.deleteUser('${esc(u.id)}')">Hapus</button>`:''}</div></td>
+      </tr>`).join('')}
+    </tbody></table></div></div>`;
+}
+function openUserForm(id=null){
+  if(!isAdmin()) return;
+  const u=id?S.users.find(x=>x.id===id):null;
+  openModal({title:u?'Edit Pengguna':'Tambah Pengguna', sub:'Kelola data akun dan avatar.', size:'lg', body:`<form id="userForm" class="form-grid">
+    <div class="field full"><label>Avatar</label><div class="img-upload" id="userAvatarUpload">
+      ${u&&u.avatar_url?`<img data-preview src="${esc(u.avatar_url)}" class="img-upload-preview avatar" style="display:block"/>`:`<img data-preview class="img-upload-preview avatar" style="display:none"/>`}
+      <div data-placeholder style="${u&&u.avatar_url?'display:none':''};color:var(--text-muted);font-size:14px">Unggah avatar (opsional)</div>
+      <div class="img-upload-actions"><label class="btn btn-secondary btn-sm" style="cursor:pointer"><input type="file" accept="image/*"/>Pilih Gambar</label><button type="button" class="btn btn-ghost btn-sm" data-remove>Hapus</button></div>
+      <div class="field-hint" data-status></div></div></div>
+    <div class="field"><label>Nama *</label><input class="input" name="name" required value="${esc(u?u.name:'')}"/></div>
+    <div class="field"><label>Email *</label><input class="input" name="email" type="email" required value="${esc(u?u.email:'')}"/></div>
+    <div class="field"><label>Peran</label><select class="select" name="role"><option value="member" ${u&&u.role==='member'?'selected':''}>Member</option><option value="admin" ${u&&u.role==='admin'?'selected':''}>Admin</option></select></div>
+    <div class="field"><label>Status</label><select class="select" name="status"><option value="active" ${!u||u.status==='active'?'selected':''}>Aktif</option><option value="inactive" ${u&&u.status==='inactive'?'selected':''}>Nonaktif</option></select></div>
+    <div class="field full"><label>${u?'PIN Baru (kosongkan jika tidak diubah)':'PIN (6 digit) *'}</label><input class="input" name="pin" inputmode="numeric" pattern="\\d{6}" maxlength="6" ${u?'':'required'} placeholder="123456"/></div>
+    <div class="field full"><label>Bio</label><textarea class="textarea" name="bio" style="min-height:80px">${esc(u?u.bio:'')}</textarea></div>
+  </form>`, footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="saveUserBtn">Simpan</button>`});
+  bindImageUpload('userAvatarUpload',{currentUrl:u?u.avatar_url:''});
+  $('#saveUserBtn').onclick = async ()=>{
+    const form=$('#userForm'); if(!form.reportValidity()) return;
+    const btn=$('#saveUserBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try{
+      const payload=Object.fromEntries(new FormData(form).entries()); payload.id=u?u.id:'';
+      const up=document.getElementById('userAvatarUpload'); const img=up._getPayload(); if(img){payload.avatar_image_base64=img.image_base64; payload.avatar_filename=img.filename; payload.avatar_mime_type=img.mime_type;} if(up._isRemoved()) payload.remove_avatar=true;
+      if(!payload.pin) delete payload.pin;
+      await api('saveUser',payload); await refreshData(true); closeModal(); toast(u?'Pengguna diperbarui.':'Pengguna ditambahkan.'); renderRoute();
+    }catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+function deleteUser(id){ const u=S.users.find(x=>x.id===id); if(!u) return; confirmDialog({title:'Hapus Pengguna', message:`Hapus pengguna "${u.name}"? Data terkait akan dibersihkan.`, confirmText:'Hapus Pengguna', onConfirm: async ()=>{ await api('deleteUser',{id}); await refreshData(true); toast('Pengguna dihapus.'); renderRoute(); }}); }
+
+/* ---------- Settings ---------- */
+function renderSettings(el){
+  if(!isAdmin()){ el.innerHTML='<div class="panel">Akses ditolak.</div>'; return; }
+  const s=S.settings||{};
+  el.innerHTML=`<div class="page-header"><div><h2>Pengaturan Workspace</h2><p>Konfigurasi identitas, landing page, dan preferensi.</p></div></div>
+  <form id="settingsForm" class="panel"><div class="form-grid">
+    <div class="field full"><label>Logo Workspace</label><div class="img-upload" id="logoUpload">${s.logo_url?`<img data-preview src="${esc(s.logo_url)}" class="img-upload-preview" style="max-width:160px;aspect-ratio:1/1;object-fit:contain;display:block"/>`:`<img data-preview class="img-upload-preview" style="max-width:160px;aspect-ratio:1/1;object-fit:contain;display:none"/>`}<div data-placeholder style="${s.logo_url?'display:none':''};color:var(--text-muted);font-size:14px">Unggah logo</div><div class="img-upload-actions"><label class="btn btn-secondary btn-sm" style="cursor:pointer"><input type="file" accept="image/*"/>Pilih Gambar</label><button type="button" class="btn btn-ghost btn-sm" data-remove>Hapus</button></div><div class="field-hint" data-status></div></div></div>
+    <div class="field"><label>Nama Workspace</label><input class="input" name="workspace_name" value="${esc(s.workspace_name||'')}"/></div>
+    <div class="field"><label>Tagline</label><input class="input" name="workspace_tagline" value="${esc(s.workspace_tagline||'')}"/></div>
+    <div class="field full"><label>Deskripsi</label><textarea class="textarea" name="workspace_description" style="min-height:90px">${esc(s.workspace_description||'')}</textarea></div>
+    <div class="field full"><label>Pengumuman</label><input class="input" name="announcement" value="${esc(s.announcement||'')}"/></div>
+    <div class="field"><label>Email Kontak</label><input class="input" name="contact_email" value="${esc(s.contact_email||'')}"/></div>
+    <div class="field"><label>WhatsApp</label><input class="input" name="contact_whatsapp" value="${esc(s.contact_whatsapp||'')}"/></div>
+    <div class="field"><label>Pendaftaran Publik</label><select class="select" name="allow_registration"><option value="true" ${String(s.allow_registration)!=='false'?'selected':''}>Aktif</option><option value="false" ${String(s.allow_registration)==='false'?'selected':''}>Nonaktif</option></select></div>
+    <div class="field"><label>CTA Label</label><input class="input" name="landing_cta_label" value="${esc(s.landing_cta_label||'Mulai Membaca')}"/></div>
+  </div><div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px"><button type="submit" class="btn btn-primary" id="saveSettingsBtn">Simpan Pengaturan</button></div></form>`;
+  bindImageUpload('logoUpload',{currentUrl:s.logo_url||''});
+  $('#settingsForm').onsubmit = async (e)=>{
+    e.preventDefault(); const btn=$('#saveSettingsBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try{
+      const payload=Object.fromEntries(new FormData(e.target).entries());
+      const up=document.getElementById('logoUpload'); const img=up._getPayload(); if(img){payload.logo_image_base64=img.image_base64; payload.logo_filename=img.filename; payload.logo_mime_type=img.mime_type;} if(up._isRemoved()) payload.remove_logo=true;
+      await api('updateSettings',payload); await refreshData(true); toast('Pengaturan disimpan.'); renderRoute();
+    }catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+/* ---------- Profile ---------- */
+function renderProfile(el){
+  const u=S.user||{};
+  el.innerHTML=`<div class="page-header"><div><h2>Profil Saya</h2><p>Perbarui informasi akun dan avatar Anda.</p></div></div>
+  <form id="profileForm" class="panel"><div class="form-grid">
+    <div class="field full"><label>Avatar</label><div class="img-upload" id="profileAvatarUpload">${u.avatar_url?`<img data-preview src="${esc(u.avatar_url)}" class="img-upload-preview avatar" style="display:block"/>`:`<img data-preview class="img-upload-preview avatar" style="display:none"/>`}<div data-placeholder style="${u.avatar_url?'display:none':''};color:var(--text-muted);font-size:14px">Unggah avatar</div><div class="img-upload-actions"><label class="btn btn-secondary btn-sm" style="cursor:pointer"><input type="file" accept="image/*"/>Pilih Gambar</label><button type="button" class="btn btn-ghost btn-sm" data-remove>Hapus</button></div><div class="field-hint" data-status></div></div></div>
+    <div class="field"><label>Nama</label><input class="input" name="name" required value="${esc(u.name||'')}"/></div>
+    <div class="field"><label>Email</label><input class="input" name="email" type="email" required value="${esc(u.email||'')}"/></div>
+    <div class="field full"><label>Bio</label><textarea class="textarea" name="bio" style="min-height:90px">${esc(u.bio||'')}</textarea></div>
+    <div class="field"><label>PIN Lama (untuk ganti PIN)</label><input class="input" name="old_pin" inputmode="numeric" maxlength="6" placeholder="Hanya jika ganti PIN"/></div>
+    <div class="field"><label>PIN Baru</label><input class="input" name="pin" inputmode="numeric" maxlength="6" placeholder="6 digit"/></div>
+  </div><div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px"><button type="submit" class="btn btn-primary" id="saveProfileBtn">Simpan Profil</button></div></form>`;
+  bindImageUpload('profileAvatarUpload',{currentUrl:u.avatar_url||''});
+  $('#profileForm').onsubmit = async (e)=>{
+    e.preventDefault(); const btn=$('#saveProfileBtn'); setBtnLoading(btn,true,'Menyimpan...');
+    try{
+      const payload=Object.fromEntries(new FormData(e.target).entries()); payload.id=u.id;
+      const up=document.getElementById('profileAvatarUpload'); const img=up._getPayload(); if(img){payload.avatar_image_base64=img.image_base64; payload.avatar_filename=img.filename; payload.avatar_mime_type=img.mime_type;} if(up._isRemoved()) payload.remove_avatar=true;
+      if(!payload.pin){ delete payload.pin; delete payload.old_pin; }
+      await api('saveUser',payload); await refreshData(true); toast('Profil diperbarui.'); renderRoute();
+    }catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+/* ---------- Auth ---------- */
+function openAuth(mode='login'){
+  closeModal();
+  const isLogin = mode==='login';
+  openModal({
+    title: isLogin ? 'Masuk ke Buku Workspace' : 'Buat Akun Baru',
+    sub: isLogin ? 'Lanjutkan perjalanan membaca Anda.' : 'Mulai membangun kebiasaan membaca hari ini.',
+    size:'sm',
+    body:`<form id="authForm">
+      ${!isLogin?`<div class="field"><label>Nama Lengkap *</label><input class="input" name="name" required maxlength="100" placeholder="Nama Anda"/></div>`:''}
+      <div class="field"><label>Email *</label><input class="input" name="email" type="email" required placeholder="nama@email.com"/></div>
+      <div class="field"><label>PIN 6 Digit *</label><input class="input" name="pin" inputmode="numeric" pattern="\\d{6}" maxlength="6" required placeholder="123456"/></div>
+      ${!isLogin?`<div class="field"><label>Bio (opsional)</label><input class="input" name="bio" maxlength="300" placeholder="Pembaca aktif..."/></div>`:''}
+      <div style="font-size:14px;color:var(--text-muted);line-height:1.6">${isLogin?'Belum punya akun? <a href="#" onclick="BW.openAuth(\\'register\\');return false;" style="color:var(--primary);font-weight:700">Daftar</a>':'Sudah punya akun? <a href="#" onclick="BW.openAuth(\\'login\\');return false;" style="color:var(--primary);font-weight:700">Masuk</a>'}</div>
+    </form>`,
+    footer:`<button class="btn btn-secondary" onclick="BW.closeModal()">Batal</button><button class="btn btn-primary" id="authSubmitBtn">${isLogin?'Masuk':'Daftar'}</button>`
+  });
+  $('#authSubmitBtn').onclick = async ()=>{
+    const form=$('#authForm'); if(!form.reportValidity()) return;
+    const btn=$('#authSubmitBtn'); setBtnLoading(btn,true,isLogin?'Masuk...':'Mendaftar...');
+    try{
+      const payload=Object.fromEntries(new FormData(form).entries());
+      const res = await api(isLogin?'login':'register', payload);
+      S.token = res.token; S.user = res.user; saveSession();
+      closeModal(); toast(isLogin?'Berhasil masuk.':'Akun berhasil dibuat.');
+      await refreshData(true);
+      enterApp();
+    }catch(err){ toast(err.message,'error'); setBtnLoading(btn,false); }
+  };
+}
+
+async function logout(){
+  try{ if(CONFIG.API_URL && S.token) await api('logout',{}); }catch(e){}
+  clearSession();
+  S.myLogs=[]; S.myQuizResults=[]; S.users=[]; S.allLogs=[]; S.allQuizResults=[];
+  $('#appShell').classList.remove('active');
+  $('#landing-page').style.display='';
+  document.body.classList.remove('modal-open');
+  closeModal();
+  location.hash='#home';
+  toast('Anda telah keluar.');
+}
+
+/* ---------- Data / Bootstrap ---------- */
+async function refreshData(silent=false){
+  if(!CONFIG.API_URL){
+    if(!silent) toast('API_URL belum diatur di theme.xml.','warn');
+    return;
+  }
+  try{
+    const data = await apiGet('initApp');
+    applyInitData(data);
+    if($('#appShell').classList.contains('active')) renderRoute();
+  }catch(err){
+    if(!silent) toast(err.message,'error');
+    // fallback to cache
+    const cached = cacheGet(); if(cached) applyInitData(cached);
+  }
+}
+
+function enterApp(){
+  $('#landing-page').style.display='none';
+  $('#appShell').classList.add('active');
+  updateUserUI();
+  const hash = location.hash.replace(/^#\//,'');
+  const parts = hash.split('/');
+  if(ROUTES[parts[0]]){ S.route=parts[0]; S.routeParam=parts[1]?decodeURIComponent(parts[1]):null; }
+  else { S.route='dashboard'; S.routeParam=null; location.hash='#/dashboard'; }
+  renderRoute();
+}
+
+/* ---------- Landing helpers ---------- */
+function scrollToSection(id){
+  const landingVisible = $('#landing-page').style.display !== 'none';
+  if(!landingVisible){
+    // go back to landing
+    $('#appShell').classList.remove('active');
+    $('#landing-page').style.display='';
+    location.hash = '#home';
+  }
+  closeMobileMenu();
+  setTimeout(()=>{ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }, 50);
+}
+function toggleMobileMenu(){ $('#mobileDrawer').classList.toggle('open'); }
+function closeMobileMenu(){ $('#mobileDrawer')?.classList.remove('open'); }
+document.addEventListener('click',(e)=>{ const nav=$('#landingNav'); if(nav && !nav.contains(e.target)) closeMobileMenu(); });
+function toggleFaq(btn){ const item=btn.closest('.faq-item'); const wasOpen=item.classList.contains('open'); $$('.faq-item').forEach(i=>i.classList.remove('open')); if(!wasOpen) item.classList.add('open'); }
+
+function initAnimations(){
+  const obs = new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('visible'); obs.unobserve(en.target); } }); }, {threshold:.12});
+  $$('.fade-up,.stagger').forEach(el=>obs.observe(el));
+}
+
+function hydrateLanding(data){
+  if(!data) return;
+  const s=data.settings||{}; const stats=data.stats||{};
+  if(s.workspace_name) $('#brandName').textContent = s.workspace_name;
+  if(stats.books) $('#heroStatBooks').textContent = stats.books;
+  if(stats.members) $('#heroStatMembers').textContent = stats.members;
+  if(stats.reading_logs) $('#heroStatLogs').textContent = stats.reading_logs>999?(stats.reading_logs/1000).toFixed(1)+'k':stats.reading_logs;
+  const books = data.featured_books || data.books || [];
+  if(books.length){
+    const grid = $('#landingBookGrid');
+    grid.innerHTML = books.slice(0,4).map(b=>{
+      const cover = b.cover_url ? `<img src="${esc(b.cover_url)}" alt="${esc(b.title)}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="book-cover-placeholder" style="display:none">${esc(b.title)}</div>` : `<div class="book-cover-placeholder">${esc(b.title)}</div>`;
+      const badge = b.featured?'<span class="book-badge badge badge-amber">Unggulan</span>':(b.status==='upcoming'?'<span class="book-badge badge badge-primary">Segera</span>':'');
+      return `<div class="book-card"><div class="book-cover">${cover}${badge}</div><div class="book-body"><div class="book-cat">${esc(b.category||'Umum')}</div><h3 class="book-title">${esc(b.title)}</h3><p class="book-author">${esc(b.author||'-')}</p><div class="book-meta"><span>${Number(b.total_pages||0)} hal</span></div></div><div class="book-actions"><button class="btn btn-secondary btn-sm" onclick="BW.openAuth('register')">Mulai Baca</button></div></div>`;
+    }).join('');
+  }
+}
+
+async function boot(){
+  loadSession();
+  initAnimations();
+  // Try loading public/initial data
+  if(CONFIG.API_URL){
+    try {
+      const data = await apiGet('initApp');
+      applyInitData(data);
+      hydrateLanding(data);
+      if(S.user && S.token){ enterApp(); return; }
+    } catch(e){
+      const cached = cacheGet(); if(cached){ applyInitData(cached); hydrateLanding(cached); }
+      if(S.user && S.token){ enterApp(); return; }
+    }
+  } else {
+    const cached = cacheGet(); if(cached){ applyInitData(cached); hydrateLanding(cached); }
+    // Show landing with demo notice on first action
+    console.warn('Buku Workspace: CONFIG.API_URL belum diatur.');
+  }
+  // Default: show landing
+  $('#landing-page').style.display='';
+  $('#appShell').classList.remove('active');
+}
+
+/* ---------- Public API ---------- */
+window.BW = {
+  navigate, renderBooks, openBookForm, deleteBook, openLogForm, deleteLog,
+  openDiscussionForm, openReplyForm, toggleLike, togglePin, deleteDiscussion,
+  openQuizForm, addQuizQuestion, deleteQuiz, takeQuiz,
+  openUserForm, deleteUser, openChapterForm, openChapterRead, deleteChapter,
+  openAuth, logout, refreshData, scrollToSection, toggleMobileMenu, toggleFaq,
+  openMoreMenu, closeModal
+};
+
+boot();
+})();
+ //]]>
+</script>
+
+<b:section id='main-spa-container' maxwidgets='1' showaddelement='no'/>
+</div>
+</body>
+</html>
